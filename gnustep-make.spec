@@ -12,8 +12,8 @@ Summary: 	GNUstep Makefile package
 URL:		http://www.gnustep.org/
 BuildRoot:	%{_tmppath}/%{name}-%{version}
 BuildArch:	noarch
-BuildRequires:	texinfo
-BuildRequires:	tetex-dvips tetex-texi2html
+BuildRequires:	texinfo latex2html
+BuildRequires:	tetex-latex tetex-dvips tetex-texi2html
 
 %description
 This package contains the basic scripts, makefiles and directory layout
