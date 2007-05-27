@@ -1,4 +1,4 @@
-%define version	2.0.0
+%define version	2.0.1
 %define name	gnustep-make
 %define release %mkrel 1
 
@@ -37,16 +37,13 @@ make install GNUSEP_DOC=%_prefix/GNUstep
 # Create profile files
 mkdir -p ${RPM_BUILD_ROOT}/etc/profile.d
 echo "#!/bin/sh" > gnustep.sh
-echo ". %{_datadir}/GNUstep/Makefiles/GNUstep.sh" >> gnustep.sh
+echo ". %{_prefix}/GNUstep/Makefiles/GNUstep.sh" >> gnustep.sh
 echo "#!/bin/csh" > gnustep.csh
-echo "source %{_datadir}/GNUstep/System/Makefiles/GNUstep.csh" >> gnustep.csh
+echo "source %{_prefix}/GNUstep/System/Makefiles/GNUstep.csh" >> gnustep.csh
 
 chmod 755 gnustep.*
 mv gnustep.sh $RPM_BUILD_ROOT/etc/profile.d/
 mv gnustep.csh $RPM_BUILD_ROOT/etc/profile.d/
-
-%post
-. %{_sysconfdir}/profile.d/gnustep.sh
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -58,4 +55,3 @@ rm -rf $RPM_BUILD_ROOT
 %{_sysconfdir}/profile.d/*
 %{_sysconfdir}/GNUstep
 %{_prefix}/GNUstep
-
