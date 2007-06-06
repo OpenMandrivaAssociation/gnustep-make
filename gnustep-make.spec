@@ -1,6 +1,8 @@
 %define version	2.0.1
 %define name	gnustep-make
-%define release %mkrel 2
+%define release %mkrel 3
+
+%define build_doc 1
 
 Name: 		%{name}
 Version: 	%{version}
@@ -11,9 +13,11 @@ Group:		Development/Other
 Summary: 	GNUstep Makefile package
 URL:		http://www.gnustep.org/
 BuildRoot:	%{_tmppath}/%{name}-%{version}
-BuildArch:	noarch
-#BuildRequires:	texinfo latex2html
-#BuildRequires:	tetex-latex tetex-dvips tetex-texi2html
+%if %build_doc
+BuildRequires:	texinfo latex2html
+BuildRequires:	tetex-latex tetex-dvips tetex-texi2html
+BuildRequires:	%name = %version
+%endif
 
 %description
 This package contains the basic scripts, makefiles and directory layout
@@ -23,16 +27,20 @@ needed to run and compile any GNUstep software.
 %setup -q
  
 %build
-./configure
+CFLAGS="$RPM_OPT_FLAGS" ./configure
 %make
-#cd Documentation
-#make
+%if %build_doc
+cd Documentation
+make
+%endif
 
 %install
 rm -rf $RPM_BUILD_ROOT
 %makeinstall_std
-#cd Documentation
-#make install GNUSEP_DOC=%buildroot/%_prefix/GNUstep
+%if %build_doc
+cd Documentation
+%makeinstall_std
+%endif
  
 # Create profile files
 mkdir -p ${RPM_BUILD_ROOT}/etc/profile.d
@@ -50,8 +58,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr (-, root, root)
-%doc ANNOUNCE COPYING ChangeLog FAQ GNUstep-HOWTO
-%doc INSTALL NEWS README 
+%doc ANNOUNCE ChangeLog* FAQ GNUstep-HOWTO
+%doc NEWS README RELEASENOTES Version
 %{_sysconfdir}/profile.d/*
 %{_sysconfdir}/GNUstep
 %{_prefix}/GNUstep
