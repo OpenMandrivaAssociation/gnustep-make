@@ -16,7 +16,7 @@ BuildRoot:	%{_tmppath}/%{name}-%{version}
 %if %build_doc
 BuildRequires:	texinfo latex2html
 BuildRequires:	tetex-latex tetex-dvips tetex-texi2html
-BuildRequires:	%name >= %version
+#BuildRequires:	%name >= %version
 %endif
 
 %description
