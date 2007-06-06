@@ -16,7 +16,7 @@ BuildRoot:	%{_tmppath}/%{name}-%{version}
 %if %build_doc
 BuildRequires:	texinfo latex2html
 BuildRequires:	tetex-latex tetex-dvips tetex-texi2html
-BuildRequires:	%name = %version
+BuildRequires:	%name >= %version
 %endif
 
 %description
@@ -58,8 +58,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr (-, root, root)
-%doc ANNOUNCE ChangeLog* FAQ GNUstep-HOWTO
-%doc NEWS README RELEASENOTES Version
+%doc ANNOUNCE ChangeLog FAQ GNUstep-HOWTO NEWS README RELEASENOTES Version
 %{_sysconfdir}/profile.d/*
 %{_sysconfdir}/GNUstep
 %{_prefix}/GNUstep
