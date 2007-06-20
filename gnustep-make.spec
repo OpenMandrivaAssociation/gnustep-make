@@ -2,10 +2,6 @@
 %define name	gnustep-make
 %define release %mkrel 4
 
-# Documentation will not build/install properly without GNUstep.conf
-# So, must build without documentation the first time.
-%define build_doc 0
-
 Name: 		%{name}
 Version: 	%{version}
 Release: 	%release
@@ -15,11 +11,9 @@ Group:		Development/Other
 Summary: 	GNUstep Makefile package
 URL:		http://www.gnustep.org/
 BuildRoot:	%{_tmppath}/%{name}-%{version}
-%if %build_doc
 BuildRequires:	texinfo latex2html
 BuildRequires:	tetex-latex tetex-dvips tetex-texi2html
-BuildRequires:	%name = %version
-%endif
+BuildConflicts:	%name
 
 %description
 This package contains the basic scripts, makefiles and directory layout
@@ -39,18 +33,18 @@ CFLAGS="$RPM_OPT_FLAGS" ./configure --prefix=/usr --with-layout=fhs \
 %make
 perl -pi -e 's|%_prefix/man|%_datadir/man||g' GNUstep.conf
 perl -pi -e 's|%_prefix/info|%_datadir/info||g' GNUstep.conf
-%if %build_doc
 cd Documentation
 make
-%endif
 
 %install
 rm -rf $RPM_BUILD_ROOT
 %makeinstall_std
-%if %build_doc
 cd Documentation
-%makeinstall_std
-%endif
+make install
+cd tmp-installation/System/Library/Documentation
+mv man %buildroot/%{_datadir}
+mv info %buildroot/%{_datadir}
+mv {Developer,User} %buildroot/%{_datadir}/GNUstep/
  
 # Create profile files
 mkdir -p ${RPM_BUILD_ROOT}/%{_sysconfdir}/profile.d
@@ -70,9 +64,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_sysconfdir}/GNUstep
 %{_bindir}/*
 %{_datadir}/GNUstep
-%if %build_doc
 %{_mandir}/man1/*
 %{_mandir}/man7/*
 %{_infodir}/*
-%endif
 
