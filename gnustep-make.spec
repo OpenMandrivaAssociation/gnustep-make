@@ -1,6 +1,6 @@
 %define version	2.0.1
 %define name	gnustep-make
-%define release %mkrel 4
+%define release %mkrel 5
 
 Name: 		%{name}
 Version: 	%{version}
@@ -32,7 +32,7 @@ CFLAGS="$RPM_OPT_FLAGS" ./configure --prefix=/usr --with-layout=fhs \
  --with-user-dir=.gnustep
 %make
 perl -pi -e 's|%_prefix/man|%_datadir/man||g' GNUstep.conf
-perl -pi -e 's|%_prefix/info|%_datadir/info||g' GNUstep.conf
+perl -pi -e 's|%_prefix/info|%_datadir/GNUstep/info||g' GNUstep.conf
 cd Documentation
 make
 
@@ -43,7 +43,7 @@ cd Documentation
 make install
 cd tmp-installation/System/Library/Documentation
 mv man %buildroot/%{_datadir}
-mv info %buildroot/%{_datadir}
+mv info %buildroot/%{_datadir}/GNUstep/
 mv {Developer,User} %buildroot/%{_datadir}/GNUstep/
  
 # Create profile files
@@ -66,5 +66,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/GNUstep
 %{_mandir}/man1/*
 %{_mandir}/man7/*
-%{_infodir}/*
 
