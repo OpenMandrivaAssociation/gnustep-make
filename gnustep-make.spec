@@ -31,7 +31,7 @@ incorrect.  Also, user files are stored in ~/.gnustep rather than ~/GNUstep.
 CFLAGS="$RPM_OPT_FLAGS" ./configure --prefix=/usr --with-layout=fhs \
  --with-user-dir=.gnustep
 %make
-perl -pi -e 's|%_prefix/man|%_datadir/man||g' GNUstep.conf
+perl -pi -e 's|%_prefix/man|%_mandir||g' GNUstep.conf
 perl -pi -e 's|%_prefix/info|%_datadir/GNUstep/info||g' GNUstep.conf
 cd Documentation
 make
