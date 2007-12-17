@@ -10,7 +10,6 @@ License: 	GPL
 Group:		Development/Other 
 Summary: 	GNUstep Makefile package
 URL:		http://www.gnustep.org/
-BuildRoot:	%{_tmppath}/%{name}-%{version}
 BuildRequires:	texinfo latex2html
 BuildRequires:	tetex-latex tetex-dvips tetex-texi2html
 BuildConflicts:	%name
