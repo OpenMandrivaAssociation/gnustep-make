@@ -1,12 +1,12 @@
-%define version	2.0.1
+%define version	2.0.5
 %define name	gnustep-make
-%define release %mkrel 5
+%define release %mkrel 1
 
 Name: 		%{name}
 Version: 	%{version}
 Release: 	%release
-Source: 	ftp://ftp.gnustep.org/pub/gnustep/core/%{name}-%{version}.tar.bz2
-License: 	GPL
+Source: 	ftp://ftp.gnustep.org/pub/gnustep/core/%{name}-%{version}.tar.gz
+License: 	GPLv3+
 Group:		Development/Other 
 Summary: 	GNUstep Makefile package
 URL:		http://www.gnustep.org/
@@ -28,8 +28,8 @@ incorrect.  Also, user files are stored in ~/.gnustep rather than ~/GNUstep.
 %setup -q
  
 %build
-CFLAGS="$RPM_OPT_FLAGS" ./configure --prefix=/usr --with-layout=fhs \
- --with-user-dir=.gnustep
+%configure2_5x --with-layout=fhs \
+	--with-user-dir=.gnustep
 %make
 perl -pi -e 's|%_prefix/man|%_mandir||g' GNUstep.conf
 perl -pi -e 's|%_prefix/info|%_datadir/GNUstep/info||g' GNUstep.conf
@@ -41,10 +41,9 @@ rm -rf $RPM_BUILD_ROOT
 %makeinstall_std
 cd Documentation
 make install
+mkdir -p %buildroot/%{_datadir}/GNUstep
 cd tmp-installation/System/Library/Documentation
-mv man %buildroot/%{_datadir}
-mv info %buildroot/%{_datadir}/GNUstep/
-mv {Developer,User} %buildroot/%{_datadir}/GNUstep/
+cp -fr info %buildroot/%{_datadir}/GNUstep/
  
 # Create profile files
 mkdir -p ${RPM_BUILD_ROOT}/%{_sysconfdir}/profile.d
@@ -60,10 +59,11 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr (-, root, root)
 %doc ANNOUNCE ChangeLog FAQ GNUstep-HOWTO NEWS README RELEASENOTES Version
+%doc Documentation/tmp-installation/System/Library/Documentation/Developer
+%doc Documentation/tmp-installation/System/Library/Documentation/User
 %{_sysconfdir}/profile.d/*
 %{_sysconfdir}/GNUstep
 %{_bindir}/*
 %{_datadir}/GNUstep
 %{_mandir}/man1/*
 %{_mandir}/man7/*
-
