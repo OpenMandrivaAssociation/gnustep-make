@@ -1,6 +1,6 @@
 %define version	2.0.6
 %define name	gnustep-make
-%define release %mkrel 1
+%define release %mkrel 2
 
 Name: 		%{name}
 Version: 	%{version}
@@ -45,14 +45,6 @@ mkdir -p %buildroot/%{_datadir}/GNUstep
 cd tmp-installation/System/Library/Documentation
 cp -fr info %buildroot/%{_datadir}/GNUstep/
  
-# Create profile files
-mkdir -p ${RPM_BUILD_ROOT}/%{_sysconfdir}/profile.d
-cd %buildroot/%{_sysconfdir}/profile.d
-ln -s %{_datadir}/GNUstep/Makefiles/GNUstep.sh
-ln -s %{_datadir}/GNUstep/Makefiles/GNUstep.csh
-chmod 755 %buildroot/%{_datadir}/GNUstep/Makefiles/GNUstep.sh
-chmod 755 %buildroot/%{_datadir}/GNUstep/Makefiles/GNUstep.csh
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -61,7 +53,6 @@ rm -rf $RPM_BUILD_ROOT
 %doc ANNOUNCE ChangeLog FAQ GNUstep-HOWTO NEWS README RELEASENOTES Version
 %doc Documentation/tmp-installation/System/Library/Documentation/Developer
 %doc Documentation/tmp-installation/System/Library/Documentation/User
-%{_sysconfdir}/profile.d/*
 %{_sysconfdir}/GNUstep
 %{_bindir}/*
 %{_datadir}/GNUstep
