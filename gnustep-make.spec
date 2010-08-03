@@ -1,4 +1,4 @@
-%define version	2.2.0
+%define version	2.4.0
 %define name	gnustep-make
 %define release %mkrel 1
 
