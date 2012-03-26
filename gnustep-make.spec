@@ -1,18 +1,18 @@
-%define version	2.4.0
-%define name	gnustep-make
-%define release %mkrel 1
+# No binaries included => no need for a debug package
+# Still can't make it noarch because files will contain
+# lib vs. lib64 references
+%define debug_package %nil
 
-Name: 		%{name}
-Version: 	%{version}
-Release: 	%release
+Name: 		gnustep-make
+Version: 	2.6.2
+Release: 	1
 Source: 	ftp://ftp.gnustep.org/pub/gnustep/core/%{name}-%{version}.tar.gz
 License: 	GPLv3+
 Group:		Development/Other 
 Summary: 	GNUstep Makefile package
 URL:		http://www.gnustep.org/
-BuildRoot:	%{_tmppath}/%{name}-%{version}
-BuildRequires:	texinfo latex2html
-BuildRequires:	tetex-latex tetex-dvips tetex-texi2html
+BuildRequires:	texinfo latex2html >= 2008-5
+BuildRequires:	tetex-latex tetex-dvips texi2html
 BuildConflicts:	%name
 
 %description
@@ -34,7 +34,7 @@ incorrect.  Also, user files are stored in ~/.gnustep rather than ~/GNUstep.
 perl -pi -e 's|%_prefix/man|%_mandir||g' GNUstep.conf
 perl -pi -e 's|%_prefix/info|%_datadir/GNUstep/info||g' GNUstep.conf
 cd Documentation
-make
+%make
 
 %install
 rm -rf $RPM_BUILD_ROOT
