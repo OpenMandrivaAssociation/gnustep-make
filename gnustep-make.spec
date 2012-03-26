@@ -11,7 +11,7 @@ License: 	GPLv3+
 Group:		Development/Other 
 Summary: 	GNUstep Makefile package
 URL:		http://www.gnustep.org/
-BuildRequires:	texinfo latex2html >= 2008-5
+BuildRequires:	texinfo latex2html >= 2008-6
 BuildRequires:	tetex-latex tetex-dvips texi2html
 BuildConflicts:	%name
 
