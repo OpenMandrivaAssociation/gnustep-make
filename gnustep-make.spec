@@ -2,11 +2,12 @@
 # Still can't make it noarch because files will contain
 # lib vs. lib64 references
 %define debug_package %nil
+%define _disable_ld_no_undefined 1
 
 Name: 		gnustep-make
 Version: 	2.6.2
-Release: 	1
-Source: 	ftp://ftp.gnustep.org/pub/gnustep/core/%{name}-%{version}.tar.gz
+Release: 	2
+Source0: 	ftp://ftp.gnustep.org/pub/gnustep/core/%{name}-%{version}.tar.gz
 License: 	GPLv3+
 Group:		Development/Other 
 Summary: 	GNUstep Makefile package
