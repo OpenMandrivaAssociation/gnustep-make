@@ -6,7 +6,7 @@
 
 Name: 		gnustep-make
 Version: 	2.6.2
-Release: 	2
+Release: 	3
 Source0: 	ftp://ftp.gnustep.org/pub/gnustep/core/%{name}-%{version}.tar.gz
 License: 	GPLv3+
 Group:		Development/Other 
@@ -27,13 +27,16 @@ incorrect.  Also, user files are stored in ~/.gnustep rather than ~/GNUstep.
 
 %prep
 %setup -q
+%if "%_lib" != "lib"
+sed -i -e 's,/lib,/%_lib,g' FilesystemLayouts/fhs*
+%endif
  
 %build
-%configure2_5x --with-layout=fhs \
+%configure2_5x --with-layout=fhs-system \
 	--with-user-dir=.gnustep
 %make
-perl -pi -e 's|%_prefix/man|%_mandir||g' GNUstep.conf
-perl -pi -e 's|%_prefix/info|%_datadir/GNUstep/info||g' GNUstep.conf
+sed -i -e 's|%_prefix/man|%_mandir|g' GNUstep.conf
+sed -i -e 's|%_prefix/info|%_datadir/GNUstep/info|g' GNUstep.conf
 cd Documentation
 %make
 
