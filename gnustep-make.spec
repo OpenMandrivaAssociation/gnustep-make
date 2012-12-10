@@ -6,7 +6,7 @@
 
 Name: 		gnustep-make
 Version: 	2.6.2
-Release: 	3
+Release: 	2
 Source0: 	ftp://ftp.gnustep.org/pub/gnustep/core/%{name}-%{version}.tar.gz
 License: 	GPLv3+
 Group:		Development/Other 
@@ -27,16 +27,13 @@ incorrect.  Also, user files are stored in ~/.gnustep rather than ~/GNUstep.
 
 %prep
 %setup -q
-%if "%_lib" != "lib"
-sed -i -e 's,/lib,/%_lib,g' FilesystemLayouts/fhs*
-%endif
  
 %build
-%configure2_5x --with-layout=fhs-system \
+%configure2_5x --with-layout=fhs \
 	--with-user-dir=.gnustep
 %make
-sed -i -e 's|%_prefix/man|%_mandir|g' GNUstep.conf
-sed -i -e 's|%_prefix/info|%_datadir/GNUstep/info|g' GNUstep.conf
+perl -pi -e 's|%_prefix/man|%_mandir||g' GNUstep.conf
+perl -pi -e 's|%_prefix/info|%_datadir/GNUstep/info||g' GNUstep.conf
 cd Documentation
 %make
 
@@ -62,3 +59,144 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/GNUstep
 %{_mandir}/man1/*
 %{_mandir}/man7/*
+
+
+%changelog
+* Sun May 13 2012 Bernhard Rosenkraenzer <bero@bero.eu> 2.6.2-2
++ Revision: 798677
+- Use _disable_ld_no_undefined, SOPE and friends rely on it
+
+* Mon Mar 26 2012 Bernhard Rosenkraenzer <bero@bero.eu> 2.6.2-1
++ Revision: 787038
+- Update to 2.6.2
+- Fix build in current environment
+
+* Tue Aug 03 2010 Funda Wang <fwang@mandriva.org> 2.4.0-1mdv2011.0
++ Revision: 565217
+- new version 2.4.0
+
+* Wed Jun 03 2009 Funda Wang <fwang@mandriva.org> 2.2.0-1mdv2010.0
++ Revision: 382408
+- New version 2.2.0
+
+* Wed Jan 07 2009 Funda Wang <fwang@mandriva.org> 2.0.8-1mdv2009.1
++ Revision: 326893
+- New version 2.0.8
+
+* Wed Jun 25 2008 Funda Wang <fwang@mandriva.org> 2.0.6-2mdv2009.0
++ Revision: 229097
+- drop profile.d as it will confuse icecream (bug#41639)
+
+* Thu Jun 19 2008 Funda Wang <fwang@mandriva.org> 2.0.6-1mdv2009.0
++ Revision: 226160
+- New version 2.0.6
+
+* Tue Jun 03 2008 Funda Wang <fwang@mandriva.org> 2.0.5-1mdv2009.0
++ Revision: 214634
+- New version 2.0.5
+
+* Fri Dec 21 2007 Olivier Blin <blino@mandriva.org> 2.0.1-5mdv2008.1
++ Revision: 136456
+- restore BuildRoot
+
+  + Thierry Vignaud <tv@mandriva.org>
+    - kill re-definition of %%buildroot on Pixel's request
+    - replace %%_datadir/man by %%_mandir!
+
+* Tue Jun 26 2007 Austin Acton <austin@mandriva.org> 2.0.1-5mdv2008.0
++ Revision: 44736
+- move conflicting (and probably never read) info files outside of global info
+
+* Wed Jun 20 2007 Austin Acton <austin@mandriva.org> 2.0.1-4mdv2008.0
++ Revision: 41897
+- add buildconflict with itself; may reduce some problems
+- move everything to FHS layout
+- move user dir to ~/.gnustep
+- fix man and info locations
+- link directly to profile.d files
+- install docs by hand to avoid buildrequring itself
+- un#, fix test
+- # self
+- fix my own doc mistake
+- enforce RPM_OPT_FLAGS (making this arch-dependent, despite no binaries)
+- build docs
+
+* Mon May 28 2007 Austin Acton <austin@mandriva.org> 2.0.1-2mdv2008.0
++ Revision: 31928
+- fix profile scripts (I suck)
+- temporarily disable doc bulding (GNUstep sucks)
+
+* Sun May 27 2007 Austin Acton <austin@mandriva.org> 2.0.1-1mdv2008.0
++ Revision: 31865
+- new version
+- fix profile script
+- remove useless post
+
+* Sun May 27 2007 Austin Acton <austin@mandriva.org> 2.0.0-1mdv2008.0
++ Revision: 31698
+- fix buildrequires
+- buildrequires texi2html
+- new version
+- redo much of spec file
+- support csh
+- install everything in default location for now, for simplicity
+- noarch
+- source settings on post
+- Import gnustep-make
+
+
+
+* Mon Jun 18 2006 Charles A Edwards <eslrahc@mandriva.org> 1.12.0-2mdv2007.0
+- don't flag GNUstep.sh in file list as config file
+
+* Mon Jun 18 2006 Charles A Edwards <eslrahc@mandriva.org> 1.12.0-1mdv2007.0
+- 1.12.0
+- mkrel
+- add sources1 & 2 and p0 & p1
+- guiet setup
+- add doc build and update file list
+
+* Fri Sep 10 2004 Lenny Cartier <lenny@mandrakesoft.com> 1.10.0-1mdk
+- 1.10.0
+
+* Tue Jun 03 2003 Lenny Cartier <lenny@mandrakesoft.com> 1.6.0-1mdk
+- 1.6.0
+
+* Wed Jan 29 2003 Lenny Cartier <lenny@mandrakesoft.com> 1.5.1-2mdk
+- rebuild
+
+* Fri Nov 29 2002 Lenny Cartier <lenny@mandrakesoft.com> 1.5.1-1mdk
+- 1.5.1
+
+* Fri Nov 15 2002 Lenny Cartier <lenny@mandrakesoft.com> 1.5.0-1mdk
+- 1.5.0
+- bzip2 sources
+- add some docs
+
+* Thu Aug 8 2002 Antoine Ginies <aginies@mandrakesoft.com> 1.4.0-1mdk
+- first mandrakesoft.com release
+- based on Adam Fedor <fedor@gnu.org> spec
+
+* Thu Jul 19 2001 Adam Fedor <fedor@gnu.org>
+- Remove csh script
+
+* Thu Apr 12 2001 Adam Fedor <fedor@gnu.org>
+- Changed default combo to gnu-gnu-gnu
+
+* Mon Feb 19 2001  Nicola Pero  <nicola@brainstorm.co.uk>
+- Updated for new special_prefix option
+	
+* Wed Jan 17 2001  Nicola Pero  <nicola@brainstorm.co.uk>
+- Updated; heavily simplified and mostly rewritten
+
+* Sat Sep 18 1999 Christopher Seawood <cls@seawood.org>
+- Version 0.6.0
+- Added nodupsh patch
+
+* Sat Aug 07 1999 Christopher Seawood <cls@seawood.org>
+- Updated to cvs dawn_6 branch
+
+* Fri Jun 25 1999 Christopher Seawood <cls@seawood.org>
+- Split into separate rpm from gnustep-core
+- Build from cvs snapshot
+- Added services patch
