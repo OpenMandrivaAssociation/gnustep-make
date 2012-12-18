@@ -6,7 +6,7 @@
 
 Name: 		gnustep-make
 Version: 	2.6.2
-Release: 	2
+Release: 	3
 Source0: 	ftp://ftp.gnustep.org/pub/gnustep/core/%{name}-%{version}.tar.gz
 License: 	GPLv3+
 Group:		Development/Other 
@@ -15,6 +15,13 @@ URL:		http://www.gnustep.org/
 BuildRequires:	texinfo latex2html >= 2008-6
 BuildRequires:	tetex-latex tetex-dvips texi2html
 BuildConflicts:	%name
+
+%track
+prog %name = {
+	version = %version
+	url = http://ftp.gnustep.org/pub/gnustep/core/
+	regex = %name-(__VER__)\.tar\.gz
+}
 
 %description
 This package contains the basic scripts, makefiles and directory layout
@@ -27,13 +34,16 @@ incorrect.  Also, user files are stored in ~/.gnustep rather than ~/GNUstep.
 
 %prep
 %setup -q
+%if "%_lib" != "lib"
+sed -i -e 's,/lib,/%_lib,g' FilesystemLayouts/fhs*
+%endif
  
 %build
-%configure2_5x --with-layout=fhs \
+%configure2_5x --with-layout=fhs-system \
 	--with-user-dir=.gnustep
 %make
-perl -pi -e 's|%_prefix/man|%_mandir||g' GNUstep.conf
-perl -pi -e 's|%_prefix/info|%_datadir/GNUstep/info||g' GNUstep.conf
+sed -i -e 's|%_prefix/man|%_mandir|g' GNUstep.conf
+sed -i -e 's|%_prefix/info|%_datadir/GNUstep/info|g' GNUstep.conf
 cd Documentation
 %make
 
@@ -62,6 +72,11 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Thu Oct 04 2012 Bernhard Rosenkraenzer <bero@bero.eu> 2.6.2-3
++ Revision: 818379
+- Fix /usr/lib references where it should be /usr/lib64
+- Add back rpm5 tracking info
+
 * Sun May 13 2012 Bernhard Rosenkraenzer <bero@bero.eu> 2.6.2-2
 + Revision: 798677
 - Use _disable_ld_no_undefined, SOPE and friends rely on it
@@ -144,59 +159,3 @@ rm -rf $RPM_BUILD_ROOT
 - source settings on post
 - Import gnustep-make
 
-
-
-* Mon Jun 18 2006 Charles A Edwards <eslrahc@mandriva.org> 1.12.0-2mdv2007.0
-- don't flag GNUstep.sh in file list as config file
-
-* Mon Jun 18 2006 Charles A Edwards <eslrahc@mandriva.org> 1.12.0-1mdv2007.0
-- 1.12.0
-- mkrel
-- add sources1 & 2 and p0 & p1
-- guiet setup
-- add doc build and update file list
-
-* Fri Sep 10 2004 Lenny Cartier <lenny@mandrakesoft.com> 1.10.0-1mdk
-- 1.10.0
-
-* Tue Jun 03 2003 Lenny Cartier <lenny@mandrakesoft.com> 1.6.0-1mdk
-- 1.6.0
-
-* Wed Jan 29 2003 Lenny Cartier <lenny@mandrakesoft.com> 1.5.1-2mdk
-- rebuild
-
-* Fri Nov 29 2002 Lenny Cartier <lenny@mandrakesoft.com> 1.5.1-1mdk
-- 1.5.1
-
-* Fri Nov 15 2002 Lenny Cartier <lenny@mandrakesoft.com> 1.5.0-1mdk
-- 1.5.0
-- bzip2 sources
-- add some docs
-
-* Thu Aug 8 2002 Antoine Ginies <aginies@mandrakesoft.com> 1.4.0-1mdk
-- first mandrakesoft.com release
-- based on Adam Fedor <fedor@gnu.org> spec
-
-* Thu Jul 19 2001 Adam Fedor <fedor@gnu.org>
-- Remove csh script
-
-* Thu Apr 12 2001 Adam Fedor <fedor@gnu.org>
-- Changed default combo to gnu-gnu-gnu
-
-* Mon Feb 19 2001  Nicola Pero  <nicola@brainstorm.co.uk>
-- Updated for new special_prefix option
-	
-* Wed Jan 17 2001  Nicola Pero  <nicola@brainstorm.co.uk>
-- Updated; heavily simplified and mostly rewritten
-
-* Sat Sep 18 1999 Christopher Seawood <cls@seawood.org>
-- Version 0.6.0
-- Added nodupsh patch
-
-* Sat Aug 07 1999 Christopher Seawood <cls@seawood.org>
-- Updated to cvs dawn_6 branch
-
-* Fri Jun 25 1999 Christopher Seawood <cls@seawood.org>
-- Split into separate rpm from gnustep-core
-- Build from cvs snapshot
-- Added services patch

@@ -1,0 +1,2210 @@
+Executing(%prep): /bin/sh -e /var/tmp/rpm-tmp.3961
++ umask 022
++ cd /home/bero/abf/gnustep-make/BUILD
++ '[' 1 -eq 1 ']'
++ '[' 1 -eq 1 ']'
++ '[' 1 -eq 1 ']'
++ cd /home/bero/abf/gnustep-make/BUILD
++ rm -rf gnustep-make-2.6.2
++ /bin/gzip -dc /home/bero/abf/gnustep-make/gnustep-make-2.6.2.tar.gz
++ /bin/tar -xf -
++ STATUS=0
++ '[' 0 -ne 0 ']'
++ cd gnustep-make-2.6.2
++ sed -i -e s,/lib,/lib64,g FilesystemLayouts/fhs FilesystemLayouts/fhs-system
++ exit 0
+Executing(%build): /bin/sh -e /var/tmp/rpm-tmp.3961
++ umask 022
++ cd /home/bero/abf/gnustep-make/BUILD
++ cd gnustep-make-2.6.2
++ '[' 1 -eq 1 ']'
++ '[' 1 -eq 1 ']'
++ CFLAGS='-O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC'
++ export CFLAGS
++ CXXFLAGS='-O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC'
++ export CXXFLAGS
++ FFLAGS='-O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC'
++ export FFLAGS
++ LDFLAGS=' -Wl,--as-needed -Wl,-z,relro -Wl,-O1 -Wl,--build-id -Wl,--enable-new-dtags -Wl,--hash-style=gnu'
++ export LDFLAGS
++ CONFIGURE_TOP=.
++ /usr/lib/rpm/mandriva/force-as-needed-for-shared-lib-in-libtool
+Forcing -Wl,--as-needed in configure/libtool to workaround libtool bug (cf http://lists.gnu.org/archive/html/libtool-patches/2004-06/msg00002.html)
++ /usr/lib/rpm/mandriva/fix-libtool-ltmain-from-overlinking
++ /usr/lib/rpm/mandriva/fix-libtool-from-moving-options-after-libs .
++ /usr/lib/rpm/mandriva/fix-dlsearch-path-in-libtool-for-multilib . lib64
++ '[' -f ./configure.in -o -f ./configure.ac ']'
++ CONFIGURE_XPATH='--x-includes=/usr/include --x-libraries=/usr/lib64'
++ ./configure --build=x86_64-mandriva-linux-gnu --disable-silent-rules --prefix=/usr --exec-prefix=/usr --bindir=/usr/bin --sbindir=/usr/sbin --sysconfdir=/etc --datadir=/usr/share --includedir=/usr/include --libdir=/usr/lib64 --libexecdir=/usr/lib64 --localstatedir=/var --sharedstatedir=/usr/com --mandir=/usr/share/man --infodir=/usr/share/info --x-includes=/usr/include --x-libraries=/usr/lib64 --with-layout=fhs-system --with-user-dir=.gnustep
+configure: WARNING: unrecognized options: --disable-silent-rules
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking how to run the C preprocessor... gcc -E
+checking for g++... g++
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ accepts -g... yes
+checking build system type... x86_64-mandriva-linux-gnu
+checking host system type... x86_64-mandriva-linux-gnu
+checking target system type... x86_64-mandriva-linux-gnu
+checking for library combo... gnu-gnu-gnu
+checking for apple compiler flags... yes
+checking for ar... ar
+checking for dlltool... no
+checking for ranlib... ranlib
+checking for a BSD-compatible install... /usr/bin/install -c
+checking if 'install -p' works... yes
+checking if we should use 'install -p' when installing files... yes
+checking whether ln -s works... yes
+checking for gnutar... no
+checking for gtar... gtar
+checking for chown... chown
+checking if we should enable strict gnustep-make version 2 mode by default... no
+checking for GNUstep filesystem layout to use... fhs-system
+checking if we manage to import the filesystem layout configuration... ok
+checking for prefix... /usr
+checking for GNUstep configuration file to use... /etc/GNUstep/GNUstep.conf
+checking if we should import an existing configuration file... no
+checking for user config file to use... .GNUstep.conf
+checking if the obsolete --with-user-dir option was used... .gnustep: ignored
+configure: WARNING: ignoring --with-user-dir=.gnustep option
+checking for user defaults dir to use... GNUstep/Defaults
+checking for GNUSTEP_MAKEFILES to use... /usr/share/GNUstep/Makefiles
+checking for flattened directory structure... yes
+configure: Now printing the filesystem layout configuration.
+checking for System Applications directory... /usr/lib64/GNUstep/Applications
+checking for System Admin Applications directory... /usr/lib64/GNUstep/Applications
+checking for System Web Applications directory... /usr/lib64/GNUstep/WebApplications
+checking for System Tools directory... /usr/bin
+checking for System Admin Tools directory... /usr/sbin
+checking for System Library directory... /usr/lib64/GNUstep
+checking for System Headers directory... /usr/include
+checking for System Libraries directory... /usr/lib64
+checking for System Documentation directory... /usr/share/GNUstep/Documentation
+checking for System Info Documentation directory... /usr/share/info
+checking for System Man Documentation directory... /usr/share/man
+checking for Network Applications directory... /usr/local/lib64/GNUstep/Applications
+checking for Network Admin Applications directory... /usr/local/lib64/GNUstep/Applications
+checking for Network Web Applications directory... /usr/lib64/GNUstep/WebApplications
+checking for Network Tools directory... /usr/local/bin
+checking for Network Admin Tools directory... /usr/local/sbin
+checking for Network Library directory... /usr/local/lib64/GNUstep
+checking for Network Headers directory... /usr/local/include
+checking for Network Libraries directory... /usr/local/lib64
+checking for Network Documentation directory... /usr/local/share/GNUstep/Documentation
+checking for Network Info Documentation directory... /usr/local/share/info
+checking for Network Man Documentation directory... /usr/local/share/man
+checking for Local Applications directory... /usr/local/lib64/GNUstep/Applications
+checking for Local Admin Applications directory... /usr/local/lib64/GNUstep/Applications
+checking for Local Web Applications directory... /usr/local/lib64/GNUstep/WebApplications
+checking for Local Tools directory... /usr/local/bin
+checking for Local Admin Tools directory... /usr/local/sbin
+checking for Local Library directory... /usr/local/lib64/GNUstep
+checking for Local Headers directory... /usr/local/include
+checking for Local Libraries directory... /usr/local/lib64
+checking for Local Documentation directory... /usr/local/share/GNUstep/Documentation
+checking for Local Info Documentation directory... /usr/local/share/info
+checking for Local Man Documentation directory... /usr/local/share/man
+checking for User Applications directory... GNUstep/Applications
+checking for User Admin Applications directory... GNUstep/Applications/Admin
+checking for User Web Applications directory... GNUstep/WebApplications
+checking for User Tools directory... GNUstep/Tools
+checking for User Admin Tools directory... GNUstep/Tools/Admin
+checking for User Library directory... GNUstep/Library
+checking for User Headers directory... GNUstep/Library/Headers
+checking for User Libraries directory... GNUstep/Library/Libraries
+checking for User Documentation directory... GNUstep/Library/Documentation
+checking for User Info Documentation directory... GNUstep/Library/Documentation/info
+checking for User Man Documentation directory... GNUstep/Library/Documentation/man
+checking for System User directory... /home
+checking for Network User directory... /home
+checking for Local User directory... /home
+checking for custom shared objc library... NONE
+checking for the flag to link libobjc... -lobjc
+checking whether objc has thread support... no
+checking whether Objective-C++ is supported... no
+checking whether we should use the nonfragile ABI... not requested by user
+checking for the flag to use to do partial linking... -r
+checking for the GCC version... version: 4.7
+checking whether the compiler supports native ObjC exceptions... yes
+checking if the compiler supports autodependencies... yes: gcc version is 4.7 >= 3.0
+checking if the compiler supports precompiled headers... yes
+checking if the compiler requires -shared flag to build for Solaris... yes: gcc version is 4.7 >= 4.0
+checking if we should enable 'make debug=yes' by default... no
+checking for gmake... gmake
+checking for the GNU Make version... version: 3.82
+checking for GNU Make >= 3.79... yes
+checking if GNU Make has the info function... yes
+checking if we should strip makefiles after installation... no
+checking if we should enable support for parallel building... yes
+checking for the version of gnustep-make we are compiling... 2.6.2
+checking for latex2html... latex2html
+checking for bash... /bin/bash
+checking for test... /usr/bin/test
+configure: creating ./config.status
+config.status: creating config-noarch.make
+config.status: creating config.make
+config.status: creating openapp
+config.status: creating opentool
+config.status: creating executable.template
+config.status: creating GNUmakefile
+config.status: creating GNUstep.conf
+config.status: creating GNUstep-strict-v2.conf
+config.status: creating GNUstep.sh
+config.status: creating GNUstep.csh
+config.status: creating fixpath.sh
+config.status: creating gnustep-make.spec
+config.status: creating gnustep-config
+config.status: creating TestFramework/gnustep-tests
+config.status: creating filesystem.make
+config.status: creating filesystem.sh
+config.status: creating filesystem.csh
+config.status: executing default commands
+configure: WARNING: unrecognized options: --disable-silent-rules
++ /usr/bin/make -j12
+Thanks.  All is ready: type '/usr/bin/make install' to install gnustep-make.
++ sed -i -e 's|/usr/man|/usr/share/man|g' GNUstep.conf
++ sed -i -e 's|/usr/info|/usr/share/GNUstep/info|g' GNUstep.conf
++ cd Documentation
++ /usr/bin/make -j12
+** No gnustep-make installation found, attempting to create a local/temporary one. **
+(mkdir tmp-build; \
+cd tmp-build; \
+../../configure --prefix="/home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation" \
+		--with-layout=gnustep \
+                --with-config-file="/home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation/GNUstep.conf"; \
+make; \
+make install)
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking how to run the C preprocessor... gcc -E
+checking for g++... g++
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ accepts -g... yes
+checking build system type... x86_64-unknown-linux-gnu
+checking host system type... x86_64-unknown-linux-gnu
+checking target system type... x86_64-unknown-linux-gnu
+checking for library combo... gnu-gnu-gnu
+checking for apple compiler flags... yes
+checking for ar... ar
+checking for dlltool... no
+checking for ranlib... ranlib
+checking for a BSD-compatible install... /usr/bin/install -c
+checking if 'install -p' works... yes
+checking if we should use 'install -p' when installing files... yes
+checking whether ln -s works... yes
+checking for gnutar... no
+checking for gtar... gtar
+checking for chown... chown
+checking if we should enable strict gnustep-make version 2 mode by default... no
+checking for GNUstep filesystem layout to use... gnustep
+checking if we manage to import the filesystem layout configuration... ok
+checking for prefix... /home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation
+checking for GNUstep configuration file to use... /home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation/GNUstep.conf
+checking if we should import an existing configuration file... no
+checking for user config file to use... .GNUstep.conf
+checking if the obsolete --with-user-dir option was used... no: good
+checking for user defaults dir to use... GNUstep/Defaults
+checking for GNUSTEP_MAKEFILES to use... /home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation/System/Library/Makefiles
+checking for flattened directory structure... yes
+configure: Now printing the filesystem layout configuration.
+checking for System Applications directory... /home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation/System/Applications
+checking for System Admin Applications directory... /home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation/System/Applications/Admin
+checking for System Web Applications directory... /home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation/System/Library/WebApplications
+checking for System Tools directory... /home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation/System/Tools
+checking for System Admin Tools directory... /home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation/System/Tools/Admin
+checking for System Library directory... /home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation/System/Library
+checking for System Headers directory... /home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation/System/Library/Headers
+checking for System Libraries directory... /home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation/System/Library/Libraries
+checking for System Documentation directory... /home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation/System/Library/Documentation
+checking for System Info Documentation directory... /home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation/System/Library/Documentation/info
+checking for System Man Documentation directory... /home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation/System/Library/Documentation/man
+checking for Network Applications directory... /home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation/Local/Applications
+checking for Network Admin Applications directory... /home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation/Local/Applications/Admin
+checking for Network Web Applications directory... /home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation/Local/Library/WebApplications
+checking for Network Tools directory... /home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation/Local/Tools
+checking for Network Admin Tools directory... /home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation/Local/Tools/Admin
+checking for Network Library directory... /home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation/Local/Library
+checking for Network Headers directory... /home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation/Local/Library/Headers
+checking for Network Libraries directory... /home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation/Local/Library/Libraries
+checking for Network Documentation directory... /home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation/Local/Library/Documentation
+checking for Network Info Documentation directory... /home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation/Local/Library/Documentation/info
+checking for Network Man Documentation directory... /home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation/Local/Library/Documentation/man
+checking for Local Applications directory... /home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation/Local/Applications
+checking for Local Admin Applications directory... /home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation/Local/Applications/Admin
+checking for Local Web Applications directory... /home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation/Local/Library/WebApplications
+checking for Local Tools directory... /home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation/Local/Tools
+checking for Local Admin Tools directory... /home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation/Local/Tools/Admin
+checking for Local Library directory... /home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation/Local/Library
+checking for Local Headers directory... /home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation/Local/Library/Headers
+checking for Local Libraries directory... /home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation/Local/Library/Libraries
+checking for Local Documentation directory... /home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation/Local/Library/Documentation
+checking for Local Info Documentation directory... /home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation/Local/Library/Documentation/info
+checking for Local Man Documentation directory... /home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation/Local/Library/Documentation/man
+checking for User Applications directory... GNUstep/Applications
+checking for User Admin Applications directory... GNUstep/Applications/Admin
+checking for User Web Applications directory... GNUstep/Library/WebApplications
+checking for User Tools directory... GNUstep/Tools
+checking for User Admin Tools directory... GNUstep/Tools/Admin
+checking for User Library directory... GNUstep/Library
+checking for User Headers directory... GNUstep/Library/Headers
+checking for User Libraries directory... GNUstep/Library/Libraries
+checking for User Documentation directory... GNUstep/Library/Documentation
+checking for User Info Documentation directory... GNUstep/Library/Documentation/info
+checking for User Man Documentation directory... GNUstep/Library/Documentation/man
+checking for System User directory... /home
+checking for Network User directory... /home
+checking for Local User directory... /home
+checking for custom shared objc library... NONE
+checking for the flag to link libobjc... -lobjc
+checking whether objc has thread support... no
+checking whether Objective-C++ is supported... no
+checking whether we should use the nonfragile ABI... not requested by user
+checking for the flag to use to do partial linking... -r
+checking for the GCC version... version: 4.7
+checking whether the compiler supports native ObjC exceptions... yes
+checking if the compiler supports autodependencies... yes: gcc version is 4.7 >= 3.0
+checking if the compiler supports precompiled headers... yes
+checking if the compiler requires -shared flag to build for Solaris... yes: gcc version is 4.7 >= 4.0
+checking if we should enable 'make debug=yes' by default... no
+checking for gmake... gmake
+checking for the GNU Make version... version: 3.82
+checking for GNU Make >= 3.79... yes
+checking if GNU Make has the info function... yes
+checking if we should strip makefiles after installation... no
+checking if we should enable support for parallel building... yes
+checking for the version of gnustep-make we are compiling... 2.6.2
+checking for latex2html... latex2html
+checking for bash... /bin/bash
+checking for test... /usr/bin/test
+configure: creating ./config.status
+config.status: creating config-noarch.make
+config.status: creating config.make
+config.status: creating openapp
+config.status: creating opentool
+config.status: creating executable.template
+config.status: creating GNUmakefile
+config.status: creating GNUstep.conf
+config.status: creating GNUstep-strict-v2.conf
+config.status: creating GNUstep.sh
+config.status: creating GNUstep.csh
+config.status: creating fixpath.sh
+config.status: creating gnustep-make.spec
+config.status: creating gnustep-config
+config.status: creating TestFramework/gnustep-tests
+config.status: creating filesystem.make
+config.status: creating filesystem.sh
+config.status: creating filesystem.csh
+config.status: executing default commands
+make[1]: Entering directory `/home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-build'
+make[1]: warning: jobserver unavailable: using -j1.  Add `+' to parent make rule.
+Thanks.  All is ready: type 'make install' to install gnustep-make.
+make[1]: Leaving directory `/home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-build'
+make[1]: Entering directory `/home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-build'
+make[1]: warning: jobserver unavailable: using -j1.  Add `+' to parent make rule.
+Creating system tools directory: /home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation/System/Tools
+Creating makefile directories in: /home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation/System/Library/Makefiles
+Installing GNUstep configuration file in /home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation/GNUstep.conf
+Installing gnustep-make support software
+Installing makefiles
+Installing Test Framework scripts
+Installing Test Framework support files
+Installing (and compressing) manpages
+make[1]: Leaving directory `/home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-build'
+** Running 'make all' using the local/temporary gnustep-make installation **
+/usr/bin/make all GNUSTEP_MAKEFILES="/home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation/System/Library/Makefiles"
+This is gnustep-make 2.6.2. Type 'make print-gnustep-make-help' for help.
+make[1]: Entering directory `/home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation'
+/home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation/System/Library/Makefiles/common.make:857: WARNING: Your PATH may not be set up correctly !
+/home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation/System/Library/Makefiles/common.make:858: Please try again after adding "/home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation/System/Tools" to your path
+Making all for doc gnustep-howto...
+rm -f version.texi
+echo '@set GNUSTEP-MAKE-VERSION' 2.6.2 \
+ > version.texi
+makeinfo -D NO-TEXI2HTML  \
+	-o gnustep-howto.info gnustep-howto.texi
+texi2pdf   \
+	gnustep-howto.texi -o gnustep-howto.pdf
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Mandriva)
+ restricted \write18 enabled.
+entering extended mode
+(./gnustep-howto.texi (/usr/share/texmf-dist/tex/texinfo/texinfo.tex
+Loading texinfo [version 2012-07-29.17]: pdf, fonts, markup, glyphs,
+page headings, tables, conditionals, indexing, sectioning, toc, environments,
+defuns, macros, cross references, insertions,
+(/usr/share/texmf-dist/tex/generic/epsf/epsf.tex
+This is `epsf.tex' v2.7.4 <14 February 2011>
+) localization, formatting, and turning on texinfo input format.) [2{/usr/share
+/texmf/fonts/map/pdftex/updmap/pdftex.map}] [3] [-1] (./version.texi)
+Chapter 1 Chapter 2 [1] [2] [3] Chapter 3 [4] [5] Chapter 4 [6]
+Underfull \hbox (badness 10000) in paragraph at lines 345--354
+@textrm to re-pla-ce @texttt /usr/local/share/GNUstep/Makefiles/GNUstep.sh[] @t
+extrm with
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 408--412
+[]@textrm See @texttt /usr/local/lib/GNUstep/Libraries/gnustep-
+Chapter 5 [8] Chapter 6 [9] Chapter 7 [10] [11] )
+(see the transcript file for additional information)</usr/share/texmf-dist/font
+s/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+sl10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsltt10.pfb></u
+sr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmtt10.pfb>
+Output written on gnustep-howto.pdf (14 pages, 124984 bytes).
+Transcript written on gnustep-howto.log.
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Mandriva)
+ restricted \write18 enabled.
+entering extended mode
+(./gnustep-howto.texi (/usr/share/texmf-dist/tex/texinfo/texinfo.tex
+Loading texinfo [version 2012-07-29.17]: pdf, fonts, markup, glyphs,
+page headings, tables, conditionals, indexing, sectioning, toc, environments,
+defuns, macros, cross references, insertions,
+(/usr/share/texmf-dist/tex/generic/epsf/epsf.tex
+This is `epsf.tex' v2.7.4 <14 February 2011>
+) localization, formatting, and turning on texinfo input format.)
+(./gnustep-howto.aux) [2{/usr/share/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+[3] (./gnustep-howto.toc) [-1] (./gnustep-howto.toc) (./gnustep-howto.toc)
+(./version.texi) Chapter 1 Chapter 2 [1] [2] [3] Chapter 3 [4] [5] Chapter 4
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 345--354
+@textrm to re-pla-ce @texttt /usr/local/share/GNUstep/Makefiles/GNUstep.sh[] @t
+extrm with
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 408--412
+[]@textrm See @texttt /usr/local/lib/GNUstep/Libraries/gnustep-
+Chapter 5 [8] Chapter 6 [9] Chapter 7 [10] [11] )
+(see the transcript file for additional information)</usr/share/texmf-dist/font
+s/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
+/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/share/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmsltt10.pfb></usr/share/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt1
+0.pfb>
+Output written on gnustep-howto.pdf (14 pages, 142028 bytes).
+Transcript written on gnustep-howto.log.
+texi2html -split_chapter -expandinfo -init_file gnustep.init  \
+	gnustep-howto.texi
+Making all for doc gnustep-faq...
+makeinfo -D NO-TEXI2HTML  \
+	-o gnustep-faq.info gnustep-faq.texi
+texi2pdf   \
+	gnustep-faq.texi -o gnustep-faq.pdf
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Mandriva)
+ restricted \write18 enabled.
+entering extended mode
+(./gnustep-faq.texi (/usr/share/texmf-dist/tex/texinfo/texinfo.tex
+Loading texinfo [version 2012-07-29.17]: pdf, fonts, markup, glyphs,
+page headings, tables, conditionals, indexing, sectioning, toc, environments,
+defuns, macros, cross references, insertions,
+(/usr/share/texmf-dist/tex/generic/epsf/epsf.tex
+This is `epsf.tex' v2.7.4 <14 February 2011>
+) localization, formatting, and turning on texinfo input format.) Chapter 1
+@xrdef{Top-title}{GNUstep Frequently Asked Questions with Answers}
+@xrdef{Top-snt}{Chapter@tie 1}
+@xrdef{Compatibility-title}{Compatibility}
+@xrdef{Compatibility-snt}{Section@tie 1.1}
+@xrdef{Is it easy to port OPENSTEP programs to GNUstep?-title}{Is it easy to po
+rt OPENSTEP programs to GNUstep?}
+@xrdef{Is it easy to port OPENSTEP programs to GNUstep?-snt}{Section@tie 1.1.1}
+
+@xrdef{How about porting between Cocoa and GNUstep?-title}{How about porting be
+tween Cocoa and GNUstep?}
+@xrdef{How about porting between Cocoa and GNUstep?-snt}{Section@tie 1.1.2}
+@xrdef{Tools for porting-title}{Tools for porting}
+@xrdef{Tools for porting-snt}{Section@tie 1.1.3}
+[2
+@xrdef{Top-pg}{2}
+{/usr/share/texmf/fonts/map/pdftex/updmap/pdftex.map}
+@xrdef{Compatibility-pg}{2}
+@xrdef{Is it easy to port OPENSTEP programs to GNUstep?-pg}{2}
+@xrdef{How about porting between Cocoa and GNUstep?-pg}{2}
+@xrdef{Tools for porting-pg}{2}
+]
+@xrdef{Can I transfer archived data from GNUstep to Cocoa?-title}{Can I transfe
+r archived data from GNUstep to Cocoa?}
+@xrdef{Can I transfer archived data from GNUstep to Cocoa?-snt}{Section@tie 1.1
+.4}
+@xrdef{Does distributed objects work between GNUstep and Cocoa?-title}{Does dis
+tributed objects work between GNUstep and Cocoa?}
+@xrdef{Does distributed objects work between GNUstep and Cocoa?-snt}{Section@ti
+e 1.1.5}
+@xrdef{Is there an Interface Builder for GNUstep?-title}{Is there an Interface 
+Builder for GNUstep?}
+@xrdef{Is there an Interface Builder for GNUstep?-snt}{Section@tie 1.1.6}
+@xrdef{Can I use my original NIB files?-title}{Can I use my original NIB files?
+}
+@xrdef{Can I use my original NIB files?-snt}{Section@tie 1.1.7}
+@xrdef{Can one use the hybrid "Objective-C++"-title}{Can one use the hybrid "Ob
+jective-C++"}
+@xrdef{Can one use the hybrid "Objective-C++"-snt}{Section@tie 1.1.8}
+@xrdef{Is there a plan to support Java/YellowBox Bindings?-title}{Is there a pl
+an to support the Java/YellowBox Bindings?}
+@xrdef{Is there a plan to support Java/YellowBox Bindings?-snt}{Section@tie 1.1
+.9}
+[3
+@xrdef{Can I transfer archived data from GNUstep to Cocoa?-pg}{3}
+@xrdef{Does distributed objects work between GNUstep and Cocoa?-pg}{3}
+@xrdef{Is there an Interface Builder for GNUstep?-pg}{3}
+@xrdef{Can I use my original NIB files?-pg}{3}
+@xrdef{Can one use the hybrid "Objective-C++"-pg}{3}
+@xrdef{Is there a plan to support Java/YellowBox Bindings?-pg}{3}
+]
+@xrdef{What if I compile GNUstep under OPENSTEP/MacOS X?-title}{What if I compi
+le GNUstep under OPENSTEP/MacOS X?}
+@xrdef{What if I compile GNUstep under OPENSTEP/MacOS X?-snt}{Section@tie 1.1.1
+0}
+@xrdef{Is the Objective C API for GTK related?-title}{Is the Objective C API fo
+r GTK related?}
+@xrdef{Is the Objective C API for GTK related?-snt}{Section@tie 1.1.11}
+@xrdef{How about implementing parts of the Application Kit with GTK?-title}{How
+ about implementing parts of the Application Kit with GTK?}
+@xrdef{How about implementing parts of the Application Kit with GTK?-snt}{Secti
+on@tie 1.1.12}
+@xrdef{Compiling and Developing-title}{Compiling and Developing}
+@xrdef{Compiling and Developing-snt}{Section@tie 1.2}
+@xrdef{How can I get started programming?-title}{How can I get started programm
+ing?}
+@xrdef{How can I get started programming?-snt}{Section@tie 1.2.1}
+@xrdef{How can I help with GNUstep?-title}{How can I help with GNUstep?}
+@xrdef{How can I help with GNUstep?-snt}{Section@tie 1.2.2}
+[4
+@xrdef{What if I compile GNUstep under OPENSTEP/MacOS X?-pg}{4}
+@xrdef{Is the Objective C API for GTK related?-pg}{4}
+@xrdef{How about implementing parts of the Application Kit with GTK?-pg}{4}
+@xrdef{Compiling and Developing-pg}{4}
+@xrdef{How can I get started programming?-pg}{4}
+@xrdef{How can I help with GNUstep?-pg}{4}
+]
+@xrdef{Helping develop GNUstep-title}{Helping develop GNUstep}
+@xrdef{Helping develop GNUstep-snt}{Section@tie 1.2.3}
+@xrdef{Helping document GNUstep-title}{Helping document GNUstep}
+@xrdef{Helping document GNUstep-snt}{Section@tie 1.2.4}
+@xrdef{How do I assign my contribution?-title}{How do I assign my contribution?
+}
+@xrdef{How do I assign my contribution?-snt}{Section@tie 1.2.5}
+[5
+@xrdef{Helping develop GNUstep-pg}{5}
+@xrdef{Helping document GNUstep-pg}{5}
+@xrdef{How do I assign my contribution?-pg}{5}
+]
+@xrdef{How do I update the task list?-title}{How do I update the task list?}
+@xrdef{How do I update the task list?-snt}{Section@tie 1.2.6}
+@xrdef{How do I start writing tests?-title}{How do I start writing tests?}
+@xrdef{How do I start writing tests?-snt}{Section@tie 1.2.7}
+@xrdef{How do I start writing applications?-title}{How do I start writing appli
+cations?}
+@xrdef{How do I start writing applications?-snt}{Section@tie 1.2.8}
+@xrdef{How can I help with the GNUstep website?-title}{How can I help with the 
+GNUstep website?}
+@xrdef{How can I help with the GNUstep website?-snt}{Section@tie 1.2.9}
+[6
+@xrdef{How do I update the task list?-pg}{6}
+@xrdef{How do I start writing tests?-pg}{6}
+@xrdef{How do I start writing applications?-pg}{6}
+@xrdef{How can I help with the GNUstep website?-pg}{6}
+]
+@xrdef{Why doesn't GDB support Objective-C?-title}{Why doesn't GDB support Obje
+ctive-C?}
+@xrdef{Why doesn't GDB support Objective-C?-snt}{Section@tie 1.2.10}
+@xrdef{GNU Objective C Compiler and Runtime-title}{GNU Objective C Compiler and
+ Runtime}
+@xrdef{GNU Objective C Compiler and Runtime-snt}{Section@tie 1.3}
+@xrdef{What is the Objective C Runtime?-title}{What is the Objective C Runtime?
+}
+@xrdef{What is the Objective C Runtime?-snt}{Section@tie 1.3.1}
+@xrdef{GNUstep Base Library-title}{GNUstep Base Library}
+@xrdef{GNUstep Base Library-snt}{Section@tie 1.4}
+@xrdef{What is the GNUstep Base Library?-title}{What is the GNUstep Base Librar
+y?}
+@xrdef{What is the GNUstep Base Library?-snt}{Section@tie 1.4.1}
+@xrdef{What is base's current state of development?-title}{What is its current 
+state of development?}
+@xrdef{What is base's current state of development?-snt}{Section@tie 1.4.2}
+[7
+@xrdef{Why doesn't GDB support Objective-C?-pg}{7}
+@xrdef{GNU Objective C Compiler and Runtime-pg}{7}
+@xrdef{What is the Objective C Runtime?-pg}{7}
+@xrdef{GNUstep Base Library-pg}{7}
+@xrdef{What is the GNUstep Base Library?-pg}{7}
+@xrdef{What is base's current state of development?-pg}{7}
+]
+@xrdef{What are the features of GNU Distributed Objects?-title}{What are the fe
+atures of GNU Distributed Objects?}
+@xrdef{What are the features of GNU Distributed Objects?-snt}{Section@tie 1.4.3
+}
+@xrdef{GNUstep GUI Library-title}{GNUstep GUI Library}
+@xrdef{GNUstep GUI Library-snt}{Section@tie 1.5}
+@xrdef{What is the GUI Library?-title}{What is the GUI Library?}
+@xrdef{What is the GUI Library?-snt}{Section@tie 1.5.1}
+@xrdef{Explain the organization of the front- and back-ends-title}{Explain the 
+organization of the front- and back-ends}
+@xrdef{Explain the organization of the front- and back-ends-snt}{Section@tie 1.
+5.2}
+@xrdef{What is the current state of development of the front-end?-title}{What i
+s the current state of development of the front-end?}
+@xrdef{What is the current state of development of the front-end?-snt}{Section@
+tie 1.5.3}
+[8
+@xrdef{What are the features of GNU Distributed Objects?-pg}{8}
+@xrdef{GNUstep GUI Library-pg}{8}
+@xrdef{What is the GUI Library?-pg}{8}
+@xrdef{Explain the organization of the front- and back-ends-pg}{8}
+]
+@xrdef{What is the current state of development of the back-ends?-title}{What i
+s the current state of development of the back-ends?}
+@xrdef{What is the current state of development of the back-ends?-snt}{Section@
+tie 1.5.4}
+@xrdef{GNUstep DisplayGhostScript Server-title}{GNUstep DisplayGhostScript Serv
+er}
+@xrdef{GNUstep DisplayGhostScript Server-snt}{Section@tie 1.6}
+@xrdef{What is the Display Ghostscript Server?-title}{What is the Display Ghost
+script Server?}
+@xrdef{What is the Display Ghostscript Server?-snt}{Section@tie 1.6.1}
+@xrdef{What is DGSs current state of development?-title}{What is its current st
+ate of development?}
+@xrdef{What is DGSs current state of development?-snt}{Section@tie 1.6.2}
+@xrdef{What is the relationship between the Display Ghostscript Server and X Wi
+ndows?-title}{What is the relationship between the Display Ghostscript Server a
+nd X Windows?}
+@xrdef{What is the relationship between the Display Ghostscript Server and X Wi
+ndows?-snt}{Section@tie 1.6.3}
+[9
+@xrdef{What is the current state of development of the front-end?-pg}{9}
+@xrdef{What is the current state of development of the back-ends?-pg}{9}
+@xrdef{GNUstep DisplayGhostScript Server-pg}{9}
+@xrdef{What is the Display Ghostscript Server?-pg}{9}
+@xrdef{What is DGSs current state of development?-pg}{9}
+@xrdef{What is the relationship between the Display Ghostscript Server and X Wi
+ndows?-pg}{9}
+] )</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmtt10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmtt12.pfb>
+Output written on gnustep-faq.pdf (8 pages, 97745 bytes).
+Transcript written on gnustep-faq.log.
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Mandriva)
+ restricted \write18 enabled.
+entering extended mode
+(./gnustep-faq.texi (/usr/share/texmf-dist/tex/texinfo/texinfo.tex
+Loading texinfo [version 2012-07-29.17]: pdf, fonts, markup, glyphs,
+page headings, tables, conditionals, indexing, sectioning, toc, environments,
+defuns, macros, cross references, insertions,
+(/usr/share/texmf-dist/tex/generic/epsf/epsf.tex
+This is `epsf.tex' v2.7.4 <14 February 2011>
+) localization, formatting, and turning on texinfo input format.) Chapter 1
+@xrdef{Top-title}{GNUstep Frequently Asked Questions with Answers}
+@xrdef{Top-snt}{Chapter@tie 1}
+@xrdef{Compatibility-title}{Compatibility}
+@xrdef{Compatibility-snt}{Section@tie 1.1}
+@xrdef{Is it easy to port OPENSTEP programs to GNUstep?-title}{Is it easy to po
+rt OPENSTEP programs to GNUstep?}
+@xrdef{Is it easy to port OPENSTEP programs to GNUstep?-snt}{Section@tie 1.1.1}
+
+@xrdef{How about porting between Cocoa and GNUstep?-title}{How about porting be
+tween Cocoa and GNUstep?}
+@xrdef{How about porting between Cocoa and GNUstep?-snt}{Section@tie 1.1.2}
+@xrdef{Tools for porting-title}{Tools for porting}
+@xrdef{Tools for porting-snt}{Section@tie 1.1.3}
+[2
+@xrdef{Top-pg}{2}
+{/usr/share/texmf/fonts/map/pdftex/updmap/pdftex.map}
+@xrdef{Compatibility-pg}{2}
+@xrdef{Is it easy to port OPENSTEP programs to GNUstep?-pg}{2}
+@xrdef{How about porting between Cocoa and GNUstep?-pg}{2}
+@xrdef{Tools for porting-pg}{2}
+]
+@xrdef{Can I transfer archived data from GNUstep to Cocoa?-title}{Can I transfe
+r archived data from GNUstep to Cocoa?}
+@xrdef{Can I transfer archived data from GNUstep to Cocoa?-snt}{Section@tie 1.1
+.4}
+@xrdef{Does distributed objects work between GNUstep and Cocoa?-title}{Does dis
+tributed objects work between GNUstep and Cocoa?}
+@xrdef{Does distributed objects work between GNUstep and Cocoa?-snt}{Section@ti
+e 1.1.5}
+@xrdef{Is there an Interface Builder for GNUstep?-title}{Is there an Interface 
+Builder for GNUstep?}
+@xrdef{Is there an Interface Builder for GNUstep?-snt}{Section@tie 1.1.6}
+@xrdef{Can I use my original NIB files?-title}{Can I use my original NIB files?
+}
+@xrdef{Can I use my original NIB files?-snt}{Section@tie 1.1.7}
+@xrdef{Can one use the hybrid "Objective-C++"-title}{Can one use the hybrid "Ob
+jective-C++"}
+@xrdef{Can one use the hybrid "Objective-C++"-snt}{Section@tie 1.1.8}
+@xrdef{Is there a plan to support Java/YellowBox Bindings?-title}{Is there a pl
+an to support the Java/YellowBox Bindings?}
+@xrdef{Is there a plan to support Java/YellowBox Bindings?-snt}{Section@tie 1.1
+.9}
+[3
+@xrdef{Can I transfer archived data from GNUstep to Cocoa?-pg}{3}
+@xrdef{Does distributed objects work between GNUstep and Cocoa?-pg}{3}
+@xrdef{Is there an Interface Builder for GNUstep?-pg}{3}
+@xrdef{Can I use my original NIB files?-pg}{3}
+@xrdef{Can one use the hybrid "Objective-C++"-pg}{3}
+@xrdef{Is there a plan to support Java/YellowBox Bindings?-pg}{3}
+]
+@xrdef{What if I compile GNUstep under OPENSTEP/MacOS X?-title}{What if I compi
+le GNUstep under OPENSTEP/MacOS X?}
+@xrdef{What if I compile GNUstep under OPENSTEP/MacOS X?-snt}{Section@tie 1.1.1
+0}
+@xrdef{Is the Objective C API for GTK related?-title}{Is the Objective C API fo
+r GTK related?}
+@xrdef{Is the Objective C API for GTK related?-snt}{Section@tie 1.1.11}
+@xrdef{How about implementing parts of the Application Kit with GTK?-title}{How
+ about implementing parts of the Application Kit with GTK?}
+@xrdef{How about implementing parts of the Application Kit with GTK?-snt}{Secti
+on@tie 1.1.12}
+@xrdef{Compiling and Developing-title}{Compiling and Developing}
+@xrdef{Compiling and Developing-snt}{Section@tie 1.2}
+@xrdef{How can I get started programming?-title}{How can I get started programm
+ing?}
+@xrdef{How can I get started programming?-snt}{Section@tie 1.2.1}
+@xrdef{How can I help with GNUstep?-title}{How can I help with GNUstep?}
+@xrdef{How can I help with GNUstep?-snt}{Section@tie 1.2.2}
+[4
+@xrdef{What if I compile GNUstep under OPENSTEP/MacOS X?-pg}{4}
+@xrdef{Is the Objective C API for GTK related?-pg}{4}
+@xrdef{How about implementing parts of the Application Kit with GTK?-pg}{4}
+@xrdef{Compiling and Developing-pg}{4}
+@xrdef{How can I get started programming?-pg}{4}
+@xrdef{How can I help with GNUstep?-pg}{4}
+]
+@xrdef{Helping develop GNUstep-title}{Helping develop GNUstep}
+@xrdef{Helping develop GNUstep-snt}{Section@tie 1.2.3}
+@xrdef{Helping document GNUstep-title}{Helping document GNUstep}
+@xrdef{Helping document GNUstep-snt}{Section@tie 1.2.4}
+@xrdef{How do I assign my contribution?-title}{How do I assign my contribution?
+}
+@xrdef{How do I assign my contribution?-snt}{Section@tie 1.2.5}
+[5
+@xrdef{Helping develop GNUstep-pg}{5}
+@xrdef{Helping document GNUstep-pg}{5}
+@xrdef{How do I assign my contribution?-pg}{5}
+]
+@xrdef{How do I update the task list?-title}{How do I update the task list?}
+@xrdef{How do I update the task list?-snt}{Section@tie 1.2.6}
+@xrdef{How do I start writing tests?-title}{How do I start writing tests?}
+@xrdef{How do I start writing tests?-snt}{Section@tie 1.2.7}
+@xrdef{How do I start writing applications?-title}{How do I start writing appli
+cations?}
+@xrdef{How do I start writing applications?-snt}{Section@tie 1.2.8}
+@xrdef{How can I help with the GNUstep website?-title}{How can I help with the 
+GNUstep website?}
+@xrdef{How can I help with the GNUstep website?-snt}{Section@tie 1.2.9}
+[6
+@xrdef{How do I update the task list?-pg}{6}
+@xrdef{How do I start writing tests?-pg}{6}
+@xrdef{How do I start writing applications?-pg}{6}
+@xrdef{How can I help with the GNUstep website?-pg}{6}
+]
+@xrdef{Why doesn't GDB support Objective-C?-title}{Why doesn't GDB support Obje
+ctive-C?}
+@xrdef{Why doesn't GDB support Objective-C?-snt}{Section@tie 1.2.10}
+@xrdef{GNU Objective C Compiler and Runtime-title}{GNU Objective C Compiler and
+ Runtime}
+@xrdef{GNU Objective C Compiler and Runtime-snt}{Section@tie 1.3}
+@xrdef{What is the Objective C Runtime?-title}{What is the Objective C Runtime?
+}
+@xrdef{What is the Objective C Runtime?-snt}{Section@tie 1.3.1}
+@xrdef{GNUstep Base Library-title}{GNUstep Base Library}
+@xrdef{GNUstep Base Library-snt}{Section@tie 1.4}
+@xrdef{What is the GNUstep Base Library?-title}{What is the GNUstep Base Librar
+y?}
+@xrdef{What is the GNUstep Base Library?-snt}{Section@tie 1.4.1}
+@xrdef{What is base's current state of development?-title}{What is its current 
+state of development?}
+@xrdef{What is base's current state of development?-snt}{Section@tie 1.4.2}
+[7
+@xrdef{Why doesn't GDB support Objective-C?-pg}{7}
+@xrdef{GNU Objective C Compiler and Runtime-pg}{7}
+@xrdef{What is the Objective C Runtime?-pg}{7}
+@xrdef{GNUstep Base Library-pg}{7}
+@xrdef{What is the GNUstep Base Library?-pg}{7}
+@xrdef{What is base's current state of development?-pg}{7}
+]
+@xrdef{What are the features of GNU Distributed Objects?-title}{What are the fe
+atures of GNU Distributed Objects?}
+@xrdef{What are the features of GNU Distributed Objects?-snt}{Section@tie 1.4.3
+}
+@xrdef{GNUstep GUI Library-title}{GNUstep GUI Library}
+@xrdef{GNUstep GUI Library-snt}{Section@tie 1.5}
+@xrdef{What is the GUI Library?-title}{What is the GUI Library?}
+@xrdef{What is the GUI Library?-snt}{Section@tie 1.5.1}
+@xrdef{Explain the organization of the front- and back-ends-title}{Explain the 
+organization of the front- and back-ends}
+@xrdef{Explain the organization of the front- and back-ends-snt}{Section@tie 1.
+5.2}
+@xrdef{What is the current state of development of the front-end?-title}{What i
+s the current state of development of the front-end?}
+@xrdef{What is the current state of development of the front-end?-snt}{Section@
+tie 1.5.3}
+[8
+@xrdef{What are the features of GNU Distributed Objects?-pg}{8}
+@xrdef{GNUstep GUI Library-pg}{8}
+@xrdef{What is the GUI Library?-pg}{8}
+@xrdef{Explain the organization of the front- and back-ends-pg}{8}
+]
+@xrdef{What is the current state of development of the back-ends?-title}{What i
+s the current state of development of the back-ends?}
+@xrdef{What is the current state of development of the back-ends?-snt}{Section@
+tie 1.5.4}
+@xrdef{GNUstep DisplayGhostScript Server-title}{GNUstep DisplayGhostScript Serv
+er}
+@xrdef{GNUstep DisplayGhostScript Server-snt}{Section@tie 1.6}
+@xrdef{What is the Display Ghostscript Server?-title}{What is the Display Ghost
+script Server?}
+@xrdef{What is the Display Ghostscript Server?-snt}{Section@tie 1.6.1}
+@xrdef{What is DGSs current state of development?-title}{What is its current st
+ate of development?}
+@xrdef{What is DGSs current state of development?-snt}{Section@tie 1.6.2}
+@xrdef{What is the relationship between the Display Ghostscript Server and X Wi
+ndows?-title}{What is the relationship between the Display Ghostscript Server a
+nd X Windows?}
+@xrdef{What is the relationship between the Display Ghostscript Server and X Wi
+ndows?-snt}{Section@tie 1.6.3}
+[9
+@xrdef{What is the current state of development of the front-end?-pg}{9}
+@xrdef{What is the current state of development of the back-ends?-pg}{9}
+@xrdef{GNUstep DisplayGhostScript Server-pg}{9}
+@xrdef{What is the Display Ghostscript Server?-pg}{9}
+@xrdef{What is DGSs current state of development?-pg}{9}
+@xrdef{What is the relationship between the Display Ghostscript Server and X Wi
+ndows?-pg}{9}
+] )</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmtt10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmtt12.pfb>
+Output written on gnustep-faq.pdf (8 pages, 97745 bytes).
+Transcript written on gnustep-faq.log.
+texi2html -split_chapter -expandinfo -init_file gnustep.init  \
+	gnustep-faq.texi
+Making all for doc gnustep-filesystem...
+makeinfo -D NO-TEXI2HTML  \
+	-o gnustep-filesystem.info gnustep-filesystem.texi
+texi2pdf   \
+	gnustep-filesystem.texi -o gnustep-filesystem.pdf
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Mandriva)
+ restricted \write18 enabled.
+entering extended mode
+(./gnustep-filesystem.texi (/usr/share/texmf-dist/tex/texinfo/texinfo.tex
+Loading texinfo [version 2012-07-29.17]: pdf, fonts, markup, glyphs,
+page headings, tables, conditionals, indexing, sectioning, toc, environments,
+defuns, macros, cross references, insertions,
+(/usr/share/texmf-dist/tex/generic/epsf/epsf.tex
+This is `epsf.tex' v2.7.4 <14 February 2011>
+) localization, formatting, and turning on texinfo input format.) [2{/usr/share
+/texmf/fonts/map/pdftex/updmap/pdftex.map}] [3] [-1]
+(GNUstep Filesystem Hierarchy)
+@xrdef{Top-title}{GNUstep Filesystem Hierarchy}
+@xrdef{Top-snt}{}
+@xrdef{The System Domain-title}{The System Domain}
+@xrdef{The System Domain-snt}{}
+[1
+@xrdef{Top-pg}{1}
+@xrdef{The System Domain-pg}{1}
+]
+@xrdef{The Local Domain-title}{The Local Domain}
+@xrdef{The Local Domain-snt}{}
+@xrdef{The Network Domain-title}{The Network Domain}
+@xrdef{The Network Domain-snt}{}
+[2
+@xrdef{The Local Domain-pg}{2}
+@xrdef{The Network Domain-pg}{2}
+]
+@xrdef{The Users Domain-title}{The Users Domain}
+@xrdef{The Users Domain-snt}{}
+@xrdef{Structure of a Domain-title}{Structure of a Domain}
+@xrdef{Structure of a Domain-snt}{}
+@xrdef{The GNUstep Filesystem Layout-title}{The GNUstep Filesystem Layout}
+@xrdef{The GNUstep Filesystem Layout-snt}{}
+[3
+@xrdef{The Users Domain-pg}{3}
+@xrdef{Structure of a Domain-pg}{3}
+@xrdef{The GNUstep Filesystem Layout-pg}{3}
+]
+@xrdef{Accessing Domain Locations-title}{Accessing Domain Locations}
+@xrdef{Accessing Domain Locations-snt}{}
+
+Overfull \hbox (40.62396pt too wide) in paragraph at lines 256--264
+[]@textrm GNUstep-base pro-vi-des you with the @texttt NSSearchPathForDirectori
+esInDomains()[]|
+
+Underfull \hbox (badness 10000) in paragraph at lines 265--271
+@texttt GNUSTEP_NETWORK_APPS[]@textrm , @texttt GNUSTEP_LOCAL_APPS[] @textrm an
+d @texttt GNUSTEP_USER_
+@xrdef{Applications-title}{Applications}
+@xrdef{Applications-snt}{}
+[4
+@xrdef{Accessing Domain Locations-pg}{4}
+]
+Underfull \hbox (badness 10000) in paragraph at lines 301--304
+[]@textrm In gnustep-base, the @texttt Applications[] @textrm lo-ca-tions are a
+vai-la-
+
+Underfull \hbox (badness 10000) in paragraph at lines 301--304
+@textrm ble by using the @texttt NSApplicationDirectory[] @textrm di-rec-tory k
+ey for
+@xrdef{Admin Applications-title}{Admin Applications}
+@xrdef{Admin Applications-snt}{}
+@xrdef{Web Applications-title}{Web Applications}
+@xrdef{Web Applications-snt}{}
+
+Underfull \hbox (badness 10000) in paragraph at lines 342--345
+[]@textrm In gnustep-base, the @texttt Web Applications[] @textrm lo-ca-tions a
+re avai-la-
+
+Underfull \hbox (badness 7595) in paragraph at lines 342--345
+@textrm ble by using the @texttt GSWebApplicationDirectory[] @textrm di-rec-tor
+y key for
+[5
+@xrdef{Applications-pg}{5}
+@xrdef{Admin Applications-pg}{5}
+@xrdef{Web Applications-pg}{5}
+]
+@xrdef{Tools-title}{Tools}
+@xrdef{Tools-snt}{}
+
+Underfull \hbox (badness 10000) in paragraph at lines 371--374
+[]@textrm In gnustep-base, the @texttt Tools[] @textrm lo-ca-tions are avai-la-
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 371--374
+@textrm ble by using the @texttt GSToolsDirectory[] @textrm di-rec-tory key for
+
+@xrdef{Admin Tools-title}{Admin Tools}
+@xrdef{Admin Tools-snt}{}
+
+Underfull \hbox (badness 10000) in paragraph at lines 392--395
+[]@textrm In gnustep-base, the @texttt Admin Tools[] @textrm lo-ca-tions are av
+ai-la-
+
+Underfull \hbox (badness 10000) in paragraph at lines 392--395
+@textrm ble by using the @texttt GSAdminToolsDirectory[] @textrm di-rec-tory ke
+y for
+@xrdef{Library-title}{Library}
+@xrdef{Library-snt}{}
+[6
+@xrdef{Tools-pg}{6}
+@xrdef{Admin Tools-pg}{6}
+@xrdef{Library-pg}{6}
+]
+Underfull \hbox (badness 10000) in paragraph at lines 430--433
+[]@textrm In gnustep-base, the @texttt Library[] @textrm lo-ca-tions are avai-l
+a-
+
+Underfull \hbox (badness 10000) in paragraph at lines 430--433
+@textrm ble by using the @texttt NSLibraryDirectory[] @textrm di-rec-tory key f
+or
+@xrdef{Headers-title}{Headers}
+@xrdef{Headers-snt}{}
+@xrdef{Libraries-title}{Libraries}
+@xrdef{Libraries-snt}{}
+[7
+@xrdef{Headers-pg}{7}
+@xrdef{Libraries-pg}{7}
+]
+Underfull \hbox (badness 10000) in paragraph at lines 476--479
+[]@textrm In gnustep-base, the @texttt Libraries[] @textrm lo-ca-tions are avai
+-la-
+
+Underfull \hbox (badness 10000) in paragraph at lines 476--479
+@textrm ble by using the @texttt GSLibrariesDirectory[] @textrm di-rec-tory key
+ for
+@xrdef{Documentation-title}{Documentation}
+@xrdef{Documentation-snt}{}
+
+Underfull \hbox (badness 10000) in paragraph at lines 494--497
+[]@textrm In gnustep-base, the @texttt Documentation[] @textrm lo-ca-tions are 
+avai-la-
+
+Underfull \hbox (badness 10000) in paragraph at lines 494--497
+@textrm ble by using the @texttt NSDocumentationDirectory[] @textrm di-rec-tory
+ key for
+@xrdef{Documentation (Info)-title}{Documentation (Info)}
+@xrdef{Documentation (Info)-snt}{}
+@xrdef{Documentation (Man Pages)-title}{Documentation (Man Pages)}
+@xrdef{Documentation (Man Pages)-snt}{}
+@xrdef{Folders inside Library-title}{Folders inside Library}
+@xrdef{Folders inside Library-snt}{}
+[8
+@xrdef{Documentation-pg}{8}
+@xrdef{Documentation (Info)-pg}{8}
+@xrdef{Documentation (Man Pages)-pg}{8}
+@xrdef{Folders inside Library-pg}{8}
+]
+@xrdef{ApplicationSupport-title}{ApplicationSupport}
+@xrdef{ApplicationSupport-snt}{}
+
+Underfull \hbox (badness 10000) in paragraph at lines 591--594
+@textrm by using the @texttt NSApplicationSupportDirectory[] @textrm di-rec-tor
+y key for
+@xrdef{Bundles-title}{Bundles}
+@xrdef{Bundles-snt}{}
+@xrdef{ColorPickers-title}{ColorPickers}
+@xrdef{ColorPickers-snt}{}
+[9
+@xrdef{ApplicationSupport-pg}{9}
+@xrdef{Bundles-pg}{9}
+@xrdef{ColorPickers-pg}{9}
+]
+@xrdef{Colors-title}{Colors}
+@xrdef{Colors-snt}{}
+@xrdef{DTDs-title}{DTDs}
+@xrdef{DTDs-snt}{}
+@xrdef{DocTemplates-title}{DocTemplates}
+@xrdef{DocTemplates-snt}{}
+@xrdef{Fonts-title}{Fonts}
+@xrdef{Fonts-snt}{}
+@xrdef{Frameworks-title}{Frameworks}
+@xrdef{Frameworks-snt}{}
+
+Underfull \hbox (badness 10000) in paragraph at lines 688--691
+[]@textrm In gnustep-base, the @texttt Frameworks[] @textrm lo-ca-tions are ava
+i-la-
+
+Underfull \hbox (badness 10000) in paragraph at lines 688--691
+@textrm ble by using the @texttt GSFrameworksDirectory[] @textrm di-rec-tory ke
+y for
+@xrdef{Images-title}{Images}
+@xrdef{Images-snt}{}
+[10
+@xrdef{Colors-pg}{10}
+@xrdef{DTDs-pg}{10}
+@xrdef{DocTemplates-pg}{10}
+@xrdef{Fonts-pg}{10}
+@xrdef{Frameworks-pg}{10}
+]
+@xrdef{Libraries/Java-title}{Libraries/Java}
+@xrdef{Libraries/Java-snt}{}
+@xrdef{Libraries/Resources-title}{Libraries/Resources}
+@xrdef{Libraries/Resources-snt}{}
+@xrdef{KeyBindings-title}{KeyBindings}
+@xrdef{KeyBindings-snt}{}
+@xrdef{PostScript-title}{PostScript}
+@xrdef{PostScript-snt}{}
+@xrdef{Services-title}{Services}
+@xrdef{Services-snt}{}
+[11
+@xrdef{Images-pg}{11}
+@xrdef{Libraries/Java-pg}{11}
+@xrdef{Libraries/Resources-pg}{11}
+@xrdef{KeyBindings-pg}{11}
+@xrdef{PostScript-pg}{11}
+@xrdef{Services-pg}{11}
+]
+@xrdef{Sounds-title}{Sounds}
+@xrdef{Sounds-snt}{}
+@xrdef{Tools/Resources-title}{Tools/Resources}
+@xrdef{Tools/Resources-snt}{}
+@xrdef{Configuration-title}{Configuration}
+@xrdef{Configuration-snt}{}
+[12
+@xrdef{Sounds-pg}{12}
+@xrdef{Tools/Resources-pg}{12}
+@xrdef{Configuration-pg}{12}
+]
+@xrdef{File Format-title}{File Format}
+@xrdef{File Format-snt}{}
+@xrdef{Windows (MINGW)-title}{Windows (MINGW)}
+@xrdef{Windows (MINGW)-snt}{}
+[13
+@xrdef{File Format-pg}{13}
+@xrdef{Windows (MINGW)-pg}{13}
+]
+Overfull \hbox (56.00218pt too wide) in paragraph at lines 893--897
+[]@textrm In ot-her words, gnustep-make will use C:/xxx/usr/local/etc/GNUstep/G
+NUstep.conf|
+[14] )
+(see the transcript file for additional information)</usr/share/texmf-dist/font
+s/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+tt10.pfb>
+Output written on gnustep-filesystem.pdf (17 pages, 94769 bytes).
+Transcript written on gnustep-filesystem.log.
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Mandriva)
+ restricted \write18 enabled.
+entering extended mode
+(./gnustep-filesystem.texi (/usr/share/texmf-dist/tex/texinfo/texinfo.tex
+Loading texinfo [version 2012-07-29.17]: pdf, fonts, markup, glyphs,
+page headings, tables, conditionals, indexing, sectioning, toc, environments,
+defuns, macros, cross references, insertions,
+(/usr/share/texmf-dist/tex/generic/epsf/epsf.tex
+This is `epsf.tex' v2.7.4 <14 February 2011>
+) localization, formatting, and turning on texinfo input format.) [2{/usr/share
+/texmf/fonts/map/pdftex/updmap/pdftex.map}] [3] (./gnustep-filesystem.toc)
+[-1] (./gnustep-filesystem.toc) (./gnustep-filesystem.toc)
+(GNUstep Filesystem Hierarchy)
+@xrdef{Top-title}{GNUstep Filesystem Hierarchy}
+@xrdef{Top-snt}{}
+@xrdef{The System Domain-title}{The System Domain}
+@xrdef{The System Domain-snt}{}
+[1
+@xrdef{Top-pg}{1}
+@xrdef{The System Domain-pg}{1}
+]
+@xrdef{The Local Domain-title}{The Local Domain}
+@xrdef{The Local Domain-snt}{}
+@xrdef{The Network Domain-title}{The Network Domain}
+@xrdef{The Network Domain-snt}{}
+[2
+@xrdef{The Local Domain-pg}{2}
+@xrdef{The Network Domain-pg}{2}
+]
+@xrdef{The Users Domain-title}{The Users Domain}
+@xrdef{The Users Domain-snt}{}
+@xrdef{Structure of a Domain-title}{Structure of a Domain}
+@xrdef{Structure of a Domain-snt}{}
+@xrdef{The GNUstep Filesystem Layout-title}{The GNUstep Filesystem Layout}
+@xrdef{The GNUstep Filesystem Layout-snt}{}
+[3
+@xrdef{The Users Domain-pg}{3}
+@xrdef{Structure of a Domain-pg}{3}
+@xrdef{The GNUstep Filesystem Layout-pg}{3}
+]
+@xrdef{Accessing Domain Locations-title}{Accessing Domain Locations}
+@xrdef{Accessing Domain Locations-snt}{}
+
+Overfull \hbox (40.62396pt too wide) in paragraph at lines 256--264
+[]@textrm GNUstep-base pro-vi-des you with the @texttt NSSearchPathForDirectori
+esInDomains()[]|
+
+Underfull \hbox (badness 10000) in paragraph at lines 265--271
+@texttt GNUSTEP_NETWORK_APPS[]@textrm , @texttt GNUSTEP_LOCAL_APPS[] @textrm an
+d @texttt GNUSTEP_USER_
+@xrdef{Applications-title}{Applications}
+@xrdef{Applications-snt}{}
+[4
+@xrdef{Accessing Domain Locations-pg}{4}
+]
+Underfull \hbox (badness 10000) in paragraph at lines 301--304
+[]@textrm In gnustep-base, the @texttt Applications[] @textrm lo-ca-tions are a
+vai-la-
+
+Underfull \hbox (badness 10000) in paragraph at lines 301--304
+@textrm ble by using the @texttt NSApplicationDirectory[] @textrm di-rec-tory k
+ey for
+@xrdef{Admin Applications-title}{Admin Applications}
+@xrdef{Admin Applications-snt}{}
+@xrdef{Web Applications-title}{Web Applications}
+@xrdef{Web Applications-snt}{}
+
+Underfull \hbox (badness 10000) in paragraph at lines 342--345
+[]@textrm In gnustep-base, the @texttt Web Applications[] @textrm lo-ca-tions a
+re avai-la-
+
+Underfull \hbox (badness 7595) in paragraph at lines 342--345
+@textrm ble by using the @texttt GSWebApplicationDirectory[] @textrm di-rec-tor
+y key for
+[5
+@xrdef{Applications-pg}{5}
+@xrdef{Admin Applications-pg}{5}
+@xrdef{Web Applications-pg}{5}
+]
+@xrdef{Tools-title}{Tools}
+@xrdef{Tools-snt}{}
+
+Underfull \hbox (badness 10000) in paragraph at lines 371--374
+[]@textrm In gnustep-base, the @texttt Tools[] @textrm lo-ca-tions are avai-la-
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 371--374
+@textrm ble by using the @texttt GSToolsDirectory[] @textrm di-rec-tory key for
+
+@xrdef{Admin Tools-title}{Admin Tools}
+@xrdef{Admin Tools-snt}{}
+
+Underfull \hbox (badness 10000) in paragraph at lines 392--395
+[]@textrm In gnustep-base, the @texttt Admin Tools[] @textrm lo-ca-tions are av
+ai-la-
+
+Underfull \hbox (badness 10000) in paragraph at lines 392--395
+@textrm ble by using the @texttt GSAdminToolsDirectory[] @textrm di-rec-tory ke
+y for
+@xrdef{Library-title}{Library}
+@xrdef{Library-snt}{}
+[6
+@xrdef{Tools-pg}{6}
+@xrdef{Admin Tools-pg}{6}
+@xrdef{Library-pg}{6}
+]
+Underfull \hbox (badness 10000) in paragraph at lines 430--433
+[]@textrm In gnustep-base, the @texttt Library[] @textrm lo-ca-tions are avai-l
+a-
+
+Underfull \hbox (badness 10000) in paragraph at lines 430--433
+@textrm ble by using the @texttt NSLibraryDirectory[] @textrm di-rec-tory key f
+or
+@xrdef{Headers-title}{Headers}
+@xrdef{Headers-snt}{}
+@xrdef{Libraries-title}{Libraries}
+@xrdef{Libraries-snt}{}
+[7
+@xrdef{Headers-pg}{7}
+@xrdef{Libraries-pg}{7}
+]
+Underfull \hbox (badness 10000) in paragraph at lines 476--479
+[]@textrm In gnustep-base, the @texttt Libraries[] @textrm lo-ca-tions are avai
+-la-
+
+Underfull \hbox (badness 10000) in paragraph at lines 476--479
+@textrm ble by using the @texttt GSLibrariesDirectory[] @textrm di-rec-tory key
+ for
+@xrdef{Documentation-title}{Documentation}
+@xrdef{Documentation-snt}{}
+
+Underfull \hbox (badness 10000) in paragraph at lines 494--497
+[]@textrm In gnustep-base, the @texttt Documentation[] @textrm lo-ca-tions are 
+avai-la-
+
+Underfull \hbox (badness 10000) in paragraph at lines 494--497
+@textrm ble by using the @texttt NSDocumentationDirectory[] @textrm di-rec-tory
+ key for
+@xrdef{Documentation (Info)-title}{Documentation (Info)}
+@xrdef{Documentation (Info)-snt}{}
+@xrdef{Documentation (Man Pages)-title}{Documentation (Man Pages)}
+@xrdef{Documentation (Man Pages)-snt}{}
+@xrdef{Folders inside Library-title}{Folders inside Library}
+@xrdef{Folders inside Library-snt}{}
+[8
+@xrdef{Documentation-pg}{8}
+@xrdef{Documentation (Info)-pg}{8}
+@xrdef{Documentation (Man Pages)-pg}{8}
+@xrdef{Folders inside Library-pg}{8}
+]
+@xrdef{ApplicationSupport-title}{ApplicationSupport}
+@xrdef{ApplicationSupport-snt}{}
+
+Underfull \hbox (badness 10000) in paragraph at lines 591--594
+@textrm by using the @texttt NSApplicationSupportDirectory[] @textrm di-rec-tor
+y key for
+@xrdef{Bundles-title}{Bundles}
+@xrdef{Bundles-snt}{}
+@xrdef{ColorPickers-title}{ColorPickers}
+@xrdef{ColorPickers-snt}{}
+[9
+@xrdef{ApplicationSupport-pg}{9}
+@xrdef{Bundles-pg}{9}
+@xrdef{ColorPickers-pg}{9}
+]
+@xrdef{Colors-title}{Colors}
+@xrdef{Colors-snt}{}
+@xrdef{DTDs-title}{DTDs}
+@xrdef{DTDs-snt}{}
+@xrdef{DocTemplates-title}{DocTemplates}
+@xrdef{DocTemplates-snt}{}
+@xrdef{Fonts-title}{Fonts}
+@xrdef{Fonts-snt}{}
+@xrdef{Frameworks-title}{Frameworks}
+@xrdef{Frameworks-snt}{}
+
+Underfull \hbox (badness 10000) in paragraph at lines 688--691
+[]@textrm In gnustep-base, the @texttt Frameworks[] @textrm lo-ca-tions are ava
+i-la-
+
+Underfull \hbox (badness 10000) in paragraph at lines 688--691
+@textrm ble by using the @texttt GSFrameworksDirectory[] @textrm di-rec-tory ke
+y for
+@xrdef{Images-title}{Images}
+@xrdef{Images-snt}{}
+[10
+@xrdef{Colors-pg}{10}
+@xrdef{DTDs-pg}{10}
+@xrdef{DocTemplates-pg}{10}
+@xrdef{Fonts-pg}{10}
+@xrdef{Frameworks-pg}{10}
+]
+@xrdef{Libraries/Java-title}{Libraries/Java}
+@xrdef{Libraries/Java-snt}{}
+@xrdef{Libraries/Resources-title}{Libraries/Resources}
+@xrdef{Libraries/Resources-snt}{}
+@xrdef{KeyBindings-title}{KeyBindings}
+@xrdef{KeyBindings-snt}{}
+@xrdef{PostScript-title}{PostScript}
+@xrdef{PostScript-snt}{}
+@xrdef{Services-title}{Services}
+@xrdef{Services-snt}{}
+[11
+@xrdef{Images-pg}{11}
+@xrdef{Libraries/Java-pg}{11}
+@xrdef{Libraries/Resources-pg}{11}
+@xrdef{KeyBindings-pg}{11}
+@xrdef{PostScript-pg}{11}
+@xrdef{Services-pg}{11}
+]
+@xrdef{Sounds-title}{Sounds}
+@xrdef{Sounds-snt}{}
+@xrdef{Tools/Resources-title}{Tools/Resources}
+@xrdef{Tools/Resources-snt}{}
+@xrdef{Configuration-title}{Configuration}
+@xrdef{Configuration-snt}{}
+[12
+@xrdef{Sounds-pg}{12}
+@xrdef{Tools/Resources-pg}{12}
+@xrdef{Configuration-pg}{12}
+]
+@xrdef{File Format-title}{File Format}
+@xrdef{File Format-snt}{}
+@xrdef{Windows (MINGW)-title}{Windows (MINGW)}
+@xrdef{Windows (MINGW)-snt}{}
+[13
+@xrdef{File Format-pg}{13}
+@xrdef{Windows (MINGW)-pg}{13}
+]
+Overfull \hbox (56.00218pt too wide) in paragraph at lines 893--897
+[]@textrm In ot-her words, gnustep-make will use C:/xxx/usr/local/etc/GNUstep/G
+NUstep.conf|
+[14] )
+(see the transcript file for additional information)</usr/share/texmf-dist/font
+s/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
+/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on gnustep-filesystem.pdf (17 pages, 114203 bytes).
+Transcript written on gnustep-filesystem.log.
+texi2html -split_chapter -expandinfo -init_file gnustep.init  \
+	gnustep-filesystem.texi
+Making all for doc gnustep-internals...
+latex gnustep-internals.tex
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Mandriva)
+ restricted \write18 enabled.
+entering extended mode
+(./gnustep-internals.tex
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, ge
+rman-x-2012-05-30, ngerman-x-2012-05-30, basque, catalan, czech, dutch, ukengli
+sh, usenglishmax, french, galician, german, ngerman, swissgerman, italian, poli
+sh, portuguese, slovak, spanish, loaded.
+(/usr/share/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/share/texmf-dist/tex/latex/base/size10.clo))
+(/usr/share/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/share/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/share/texmf-dist/tex/generic/oberdiek/ifpdf.sty)
+(/usr/share/texmf-dist/tex/generic/oberdiek/ifvtex.sty)
+(/usr/share/texmf-dist/tex/generic/ifxetex/ifxetex.sty)
+
+Package geometry Warning: `includemp' should be set to `true' or `false'.
+
+)
+No file gnustep-internals.aux.
+*geometry* driver: auto-detecting
+*geometry* detected driver: dvips
+No file gnustep-internals.toc.
+
+Overfull \hbox (21.30092pt too wide) in paragraph at lines 48--52
+[]\OT1/cmr/m/n/10 Make will pro-cess your \OT1/cmtt/m/n/10 GNUmakefile\OT1/cmr/
+m/n/10 , which in-cludes \OT1/cmtt/m/n/10 tool.make\OT1/cmr/m/n/10 , and that w
+ill in-clude \OT1/cmtt/m/n/10 rules.make\OT1/cmr/m/n/10 .
+[1]
+Overfull \hbox (28.35612pt too wide) in paragraph at lines 84--87
+\OT1/cmr/m/n/10 This means that to build \OT1/cmtt/m/n/10 internal-all\OT1/cmr/
+m/n/10 , make has to build (at least) the \OT1/cmtt/m/n/10 decrypt.all.tool.var
+iables
+[2] [3] [4] (./gnustep-internals.aux) )
+(see the transcript file for additional information)
+Output written on gnustep-internals.dvi (4 pages, 9660 bytes).
+Transcript written on gnustep-internals.log.
+latex gnustep-internals.tex
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Mandriva)
+ restricted \write18 enabled.
+entering extended mode
+(./gnustep-internals.tex
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, ge
+rman-x-2012-05-30, ngerman-x-2012-05-30, basque, catalan, czech, dutch, ukengli
+sh, usenglishmax, french, galician, german, ngerman, swissgerman, italian, poli
+sh, portuguese, slovak, spanish, loaded.
+(/usr/share/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/share/texmf-dist/tex/latex/base/size10.clo))
+(/usr/share/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/share/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/share/texmf-dist/tex/generic/oberdiek/ifpdf.sty)
+(/usr/share/texmf-dist/tex/generic/oberdiek/ifvtex.sty)
+(/usr/share/texmf-dist/tex/generic/ifxetex/ifxetex.sty)
+
+Package geometry Warning: `includemp' should be set to `true' or `false'.
+
+) (./gnustep-internals.aux)
+*geometry* driver: auto-detecting
+*geometry* detected driver: dvips
+(./gnustep-internals.toc) [1]
+Overfull \hbox (21.30092pt too wide) in paragraph at lines 48--52
+[]\OT1/cmr/m/n/10 Make will pro-cess your \OT1/cmtt/m/n/10 GNUmakefile\OT1/cmr/
+m/n/10 , which in-cludes \OT1/cmtt/m/n/10 tool.make\OT1/cmr/m/n/10 , and that w
+ill in-clude \OT1/cmtt/m/n/10 rules.make\OT1/cmr/m/n/10 .
+
+Overfull \hbox (28.35612pt too wide) in paragraph at lines 84--87
+\OT1/cmr/m/n/10 This means that to build \OT1/cmtt/m/n/10 internal-all\OT1/cmr/
+m/n/10 , make has to build (at least) the \OT1/cmtt/m/n/10 decrypt.all.tool.var
+iables
+[2] [3] [4] (./gnustep-internals.aux) )
+(see the transcript file for additional information)
+Output written on gnustep-internals.dvi (4 pages, 10088 bytes).
+Transcript written on gnustep-internals.log.
+dvips   \
+	gnustep-internals.dvi -o gnustep-internals.ps
+This is dvips(k) 5.992 Copyright 2012 Radical Eye Software (www.radicaleye.com)
+' TeX output 2012.12.18:2307' -> gnustep-internals.ps
+</usr/share/texmf/dvips/base/tex.pro></usr/share/texmf/dvips/base/texps.pro>
+. </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb>
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb>[1] [2] [3] 
+[4] 
+gzip gnustep-internals.ps -c > gnustep-internals.ps.gz
+latex2html gnustep-internals
+$* is no longer supported at /usr/bin/latex2html line 11413.
+Note: Loading ./.latex2html-init
+Note: Initialising with file: .latex2html-init
+This is LaTeX2HTML Version 2008 (1.71)
+by Nikos Drakos, Computer Based Learning Unit, University of Leeds.
+
+Revised and extended by:
+ Marcus Hennecke, Ross Moore, Herb Swan and others
+...producing markup for HTML version 3.2  
+
+
+
+Extension: loading /usr/lib/latex2html/versions/latin1.pl
+HTML version: loading /usr/lib/latex2html/versions/html3_2.pl
+
+ *** processing declarations ***
+
+OPENING /home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/gnustep-internals.tex 
+
+Note: Working directory is /home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/gnustep-internals
+Note: Images will be generated in /var/tmp/l2h2822
+
+texexpand V2008 (Revision 1.12)
+
+
+
+Loading /usr/lib/latex2html/styles/texdefs.perl...
+Package: loading /usr/lib/latex2html/styles/article.perl
+Warning: No implementation found for option: `includemp_no' for `geometry' package
+
+Reading ...
+%%%%%%%%%%%%'''''''''''''''++
+@@@@@@@@@@@@
+
+Reading aux file: /home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/gnustep-internals.aux ...
+Processing macros ...++......................
+Translating ...
+0/8:top of gnustep-internals: for gnustep-internals.html
+
+ *** translating preamble ***
+..
+Warning: No implementation found for package: geometry.
+ *** preamble done ***
+;.;...
+
+1/8:tableofcontents:."tableofcontents" for node1.html
+;.;.
+
+2/8:section:.."1 Introduction" for node2.html
+;.;
+
+3/8:section:.."2 From `make' to the internal-all rule" for node3.html
+;,.,.;..............
+
+4/8:section:..."3 From the internal-all rule to the %.variables rule" for node4.html
+;,.,.,,,,.;............
+
+5/8:section:..."4 The %.variables rule - dependencies" for node5.html
+;.,.....;.......
+
+6/8:section:..."5 The %.variables rule - second make invocation" for node6.html
+;.,.,.,,,........,...;.............
+
+7/8:section:.."6 Second make invocation" for node7.html
+;....;.....
+
+8/8:sectionstar:.."About this document ..." for node8.html
+;;.
+
+Doing section links ....................
+ *** Adding document-specific styles *** 
+
+*********** WARNINGS ***********  
+No implementation found for style `geometry'
+
+Done.
+gtar cfzX gnustep-internals.tar.gz /home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation/System/Library/Makefiles/tar-exclude-list gnustep-internals
+Making all for doc gnustep-make...
+makeinfo -D NO-TEXI2HTML  \
+	-o gnustep-make.info gnustep-make.texi
+texi2pdf   \
+	gnustep-make.texi -o gnustep-make.pdf
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Mandriva)
+ restricted \write18 enabled.
+entering extended mode
+(./gnustep-make.texi (/usr/share/texmf-dist/tex/texinfo/texinfo.tex
+Loading texinfo [version 2012-07-29.17]: pdf, fonts, markup, glyphs,
+page headings, tables, conditionals, indexing, sectioning, toc, environments,
+defuns, macros, cross references, insertions,
+(/usr/share/texmf-dist/tex/generic/epsf/epsf.tex
+This is `epsf.tex' v2.7.4 <14 February 2011>
+) localization, formatting, and turning on texinfo input format.) [2{/usr/share
+/texmf/fonts/map/pdftex/updmap/pdftex.map}] [3] [-1] [-2] Chapter 1 [1]
+[2] [3] Cross reference values unknown; you must run TeX again. [4] [5]
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 480--484
+[]@textrm To add the co-rres-pon-ding flags, you can use @texttt ADDITIONAL_
+
+Underfull \hbox (badness 10000) in paragraph at lines 480--484
+@texttt NATIVE_LIB_DIRS += ../MyPath[] @textrm This will be con-ver-ted in-to -
+
+[7] [8] [9]
+Overfull \hbox (120.22624pt too wide) in paragraph at lines 671--671
+ []@texttt Source:         ftp://ftp.gnustep.org/pub/gnustep/libs/%{gs_name}-%{
+gs_version}.[] |
+[10] [11] [12] [13] [14]
+Underfull \hbox (badness 10000) in paragraph at lines 992--1001
+ @textrm [GNUS-TEP[]TARGET[]DIR], pa-ge $@textsy h$@textrm un-de-fined$@textsy 
+i$[][]@textrm , and [][]$@textsy h$@textrm un-de-fined$@textsy i$
+[15]
+Underfull \hbox (badness 7030) in paragraph at lines 1031--1043
+ @textrm na-mes, which are @texttt ApplicationSupport[]@textrm , @texttt Bundle
+s[]@textrm , @texttt Frameworks[]@textrm ,
+
+Underfull \hbox (badness 10000) in paragraph at lines 1031--1043
+ @texttt ApplicationSupport/Palettes[]@textrm , @texttt Services[]@textrm , @te
+xttt Libraries/Resources[]
+
+Underfull \hbox (badness 7704) in paragraph at lines 1031--1043
+ @texttt GNUSTEP_LIBRARY/ApplicationSupport[]@textrm , @texttt GNUSTEP_LIBRARY/
+Bundles[]@textrm ,
+[16] [17] [18] [19] [20] [21] [22] [23] [24] )
+(see the transcript file for additional information)</usr/share/texmf-dist/font
+s/type1/public/amsfonts/cm/cmb10.pfb></usr/share/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+r10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/
+share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmtt12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmtt9.pfb>
+Output written on gnustep-make.pdf (28 pages, 176306 bytes).
+Transcript written on gnustep-make.log.
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Mandriva)
+ restricted \write18 enabled.
+entering extended mode
+(./gnustep-make.texi (/usr/share/texmf-dist/tex/texinfo/texinfo.tex
+Loading texinfo [version 2012-07-29.17]: pdf, fonts, markup, glyphs,
+page headings, tables, conditionals, indexing, sectioning, toc, environments,
+defuns, macros, cross references, insertions,
+(/usr/share/texmf-dist/tex/generic/epsf/epsf.tex
+This is `epsf.tex' v2.7.4 <14 February 2011>
+) localization, formatting, and turning on texinfo input format.)
+(./gnustep-make.aux) [2{/usr/share/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+[3] (./gnustep-make.toc) [-1] [-2] (./gnustep-make.toc) (./gnustep-make.toc)
+Chapter 1 [1] [2] [3] [4] [5] [6]
+Underfull \hbox (badness 10000) in paragraph at lines 480--484
+[]@textrm To add the co-rres-pon-ding flags, you can use @texttt ADDITIONAL_
+
+Underfull \hbox (badness 10000) in paragraph at lines 480--484
+@texttt NATIVE_LIB_DIRS += ../MyPath[] @textrm This will be con-ver-ted in-to -
+
+[7] [8] [9]
+Overfull \hbox (120.22624pt too wide) in paragraph at lines 671--671
+ []@texttt Source:         ftp://ftp.gnustep.org/pub/gnustep/libs/%{gs_name}-%{
+gs_version}.[] |
+[10] [11] [12] [13] [14] [15]
+Underfull \hbox (badness 7030) in paragraph at lines 1031--1043
+ @textrm na-mes, which are @texttt ApplicationSupport[]@textrm , @texttt Bundle
+s[]@textrm , @texttt Frameworks[]@textrm ,
+
+Underfull \hbox (badness 10000) in paragraph at lines 1031--1043
+ @texttt ApplicationSupport/Palettes[]@textrm , @texttt Services[]@textrm , @te
+xttt Libraries/Resources[]
+
+Underfull \hbox (badness 7704) in paragraph at lines 1031--1043
+ @texttt GNUSTEP_LIBRARY/ApplicationSupport[]@textrm , @texttt GNUSTEP_LIBRARY/
+Bundles[]@textrm ,
+[16] [17] [18] [19] [20] [21] [22] [23] [24] )
+(see the transcript file for additional information)</usr/share/texmf-dist/font
+s/type1/public/amsfonts/cm/cmb10.pfb></usr/share/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+mi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr
+/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmtt10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.p
+fb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
+Output written on gnustep-make.pdf (28 pages, 194161 bytes).
+Transcript written on gnustep-make.log.
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Mandriva)
+ restricted \write18 enabled.
+entering extended mode
+(./gnustep-make.texi (/usr/share/texmf-dist/tex/texinfo/texinfo.tex
+Loading texinfo [version 2012-07-29.17]: pdf, fonts, markup, glyphs,
+page headings, tables, conditionals, indexing, sectioning, toc, environments,
+defuns, macros, cross references, insertions,
+(/usr/share/texmf-dist/tex/generic/epsf/epsf.tex
+This is `epsf.tex' v2.7.4 <14 February 2011>
+) localization, formatting, and turning on texinfo input format.)
+(./gnustep-make.aux) [2{/usr/share/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+[3] (./gnustep-make.toc) [-1] [-2] (./gnustep-make.toc) (./gnustep-make.toc)
+Chapter 1 [1] [2] [3] [4] [5] [6]
+Underfull \hbox (badness 10000) in paragraph at lines 480--484
+[]@textrm To add the co-rres-pon-ding flags, you can use @texttt ADDITIONAL_
+
+Underfull \hbox (badness 10000) in paragraph at lines 480--484
+@texttt NATIVE_LIB_DIRS += ../MyPath[] @textrm This will be con-ver-ted in-to -
+
+[7] [8] [9]
+Overfull \hbox (120.22624pt too wide) in paragraph at lines 671--671
+ []@texttt Source:         ftp://ftp.gnustep.org/pub/gnustep/libs/%{gs_name}-%{
+gs_version}.[] |
+[10] [11] [12] [13] [14] [15]
+Underfull \hbox (badness 7030) in paragraph at lines 1031--1043
+ @textrm na-mes, which are @texttt ApplicationSupport[]@textrm , @texttt Bundle
+s[]@textrm , @texttt Frameworks[]@textrm ,
+
+Underfull \hbox (badness 10000) in paragraph at lines 1031--1043
+ @texttt ApplicationSupport/Palettes[]@textrm , @texttt Services[]@textrm , @te
+xttt Libraries/Resources[]
+
+Underfull \hbox (badness 7704) in paragraph at lines 1031--1043
+ @texttt GNUSTEP_LIBRARY/ApplicationSupport[]@textrm , @texttt GNUSTEP_LIBRARY/
+Bundles[]@textrm ,
+[16] [17] [18] [19] [20] [21] [22] [23] [24] )
+(see the transcript file for additional information)</usr/share/texmf-dist/font
+s/type1/public/amsfonts/cm/cmb10.pfb></usr/share/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+mi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr
+/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmtt10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.p
+fb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
+Output written on gnustep-make.pdf (28 pages, 194163 bytes).
+Transcript written on gnustep-make.log.
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Mandriva)
+ restricted \write18 enabled.
+entering extended mode
+(./gnustep-make.texi (/usr/share/texmf-dist/tex/texinfo/texinfo.tex
+Loading texinfo [version 2012-07-29.17]: pdf, fonts, markup, glyphs,
+page headings, tables, conditionals, indexing, sectioning, toc, environments,
+defuns, macros, cross references, insertions,
+(/usr/share/texmf-dist/tex/generic/epsf/epsf.tex
+This is `epsf.tex' v2.7.4 <14 February 2011>
+) localization, formatting, and turning on texinfo input format.)
+(./gnustep-make.aux) [2{/usr/share/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+[3] (./gnustep-make.toc) [-1] [-2] (./gnustep-make.toc) (./gnustep-make.toc)
+Chapter 1 [1] [2] [3] [4] [5] [6]
+Underfull \hbox (badness 10000) in paragraph at lines 480--484
+[]@textrm To add the co-rres-pon-ding flags, you can use @texttt ADDITIONAL_
+
+Underfull \hbox (badness 10000) in paragraph at lines 480--484
+@texttt NATIVE_LIB_DIRS += ../MyPath[] @textrm This will be con-ver-ted in-to -
+
+[7] [8] [9]
+Overfull \hbox (120.22624pt too wide) in paragraph at lines 671--671
+ []@texttt Source:         ftp://ftp.gnustep.org/pub/gnustep/libs/%{gs_name}-%{
+gs_version}.[] |
+[10] [11] [12] [13] [14] [15]
+Underfull \hbox (badness 7030) in paragraph at lines 1031--1043
+ @textrm na-mes, which are @texttt ApplicationSupport[]@textrm , @texttt Bundle
+s[]@textrm , @texttt Frameworks[]@textrm ,
+
+Underfull \hbox (badness 10000) in paragraph at lines 1031--1043
+ @texttt ApplicationSupport/Palettes[]@textrm , @texttt Services[]@textrm , @te
+xttt Libraries/Resources[]
+
+Underfull \hbox (badness 7704) in paragraph at lines 1031--1043
+ @texttt GNUSTEP_LIBRARY/ApplicationSupport[]@textrm , @texttt GNUSTEP_LIBRARY/
+Bundles[]@textrm ,
+[16] [17] [18] [19] [20] [21] [22] [23] [24] )
+(see the transcript file for additional information)</usr/share/texmf-dist/font
+s/type1/public/amsfonts/cm/cmb10.pfb></usr/share/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+mi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr
+/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmtt10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.p
+fb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
+Output written on gnustep-make.pdf (28 pages, 194163 bytes).
+Transcript written on gnustep-make.log.
+texi2html -split_chapter -expandinfo -init_file gnustep.init  \
+	gnustep-make.texi
+Making all for doc gnustep-userfaq...
+makeinfo -D NO-TEXI2HTML  \
+	-o gnustep-userfaq.info gnustep-userfaq.texi
+texi2pdf   \
+	gnustep-userfaq.texi -o gnustep-userfaq.pdf
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Mandriva)
+ restricted \write18 enabled.
+entering extended mode
+(./gnustep-userfaq.texi (/usr/share/texmf-dist/tex/texinfo/texinfo.tex
+Loading texinfo [version 2012-07-29.17]: pdf, fonts, markup, glyphs,
+page headings, tables, conditionals, indexing, sectioning, toc, environments,
+defuns, macros, cross references, insertions,
+(/usr/share/texmf-dist/tex/generic/epsf/epsf.tex
+This is `epsf.tex' v2.7.4 <14 February 2011>
+) localization, formatting, and turning on texinfo input format.) Chapter 1
+@xrdef{Top-title}{GNUstep Frequently Asked Questions for Users}
+@xrdef{Top-snt}{Chapter@tie 1}
+@xrdef{GNUstep General Information-title}{GNUstep General Information}
+@xrdef{GNUstep General Information-snt}{Section@tie 1.1}
+@xrdef{What is GNUstep?-title}{What is GNUstep?}
+@xrdef{What is GNUstep?-snt}{Section@tie 1.1.1}
+@xrdef{What is the OpenStep standard?-title}{What is the OpenStep standard?}
+@xrdef{What is the OpenStep standard?-snt}{Section@tie 1.1.2}
+@xrdef{What platforms does GNUstep run on?-title}{What platforms does GNUstep r
+un on?}
+@xrdef{What platforms does GNUstep run on?-snt}{Section@tie 1.1.3}
+@xrdef{Does GNUstep run on Windows?-title}{Does GNUstep run on Windows?}
+@xrdef{Does GNUstep run on Windows?-snt}{Section@tie 1.1.4}
+@xrdef{What is GNUstep's position towards KDE and the GNOME project?-title}{Wha
+t is GNUstep's position towards KDE and the GNOME project?}
+@xrdef{What is GNUstep's position towards KDE and the GNOME project?-snt}{Secti
+on@tie 1.1.5}
+[2
+@xrdef{Top-pg}{2}
+{/usr/share/texmf/fonts/map/pdftex/updmap/pdftex.map}
+@xrdef{GNUstep General Information-pg}{2}
+@xrdef{What is GNUstep?-pg}{2}
+@xrdef{What is the OpenStep standard?-pg}{2}
+@xrdef{What platforms does GNUstep run on?-pg}{2}
+@xrdef{Does GNUstep run on Windows?-pg}{2}
+@xrdef{What is GNUstep's position towards KDE and the GNOME project?-pg}{2}
+]
+@xrdef{How can I get GNUstep?-title}{How can I get GNUstep?}
+@xrdef{How can I get GNUstep?-snt}{Section@tie 1.1.6}
+@xrdef{How do you run GNUstep?-title}{How do you run GNUstep?}
+@xrdef{How do you run GNUstep?-snt}{Section@tie 1.1.7}
+@xrdef{Is there a web site?-title}{Is there a web site?}
+@xrdef{Is there a web site?-snt}{Section@tie 1.1.8}
+@xrdef{When is GNUstep intended to be available?-title}{When is GNUstep intende
+d to be available?}
+@xrdef{When is GNUstep intended to be available?-snt}{Section@tie 1.1.9}
+@xrdef{What is usable?-title}{What is usable?}
+@xrdef{What is usable?-snt}{Section@tie 1.1.10}
+@xrdef{Compiling and Installing-title}{Compiling and Installing}
+@xrdef{Compiling and Installing-snt}{Section@tie 1.2}
+@xrdef{How do I compile GNUstep on my machine?-title}{How do I compile GNUstep 
+on my machine?}
+@xrdef{How do I compile GNUstep on my machine?-snt}{Section@tie 1.2.1}
+[3
+@xrdef{How can I get GNUstep?-pg}{3}
+@xrdef{How do you run GNUstep?-pg}{3}
+@xrdef{Is there a web site?-pg}{3}
+@xrdef{When is GNUstep intended to be available?-pg}{3}
+@xrdef{What is usable?-pg}{3}
+@xrdef{Compiling and Installing-pg}{3}
+]
+@xrdef{Are there any precompiled packages available?-title}{Are there any preco
+mpiled packages available?}
+@xrdef{Are there any precompiled packages available?-snt}{Section@tie 1.2.2}
+@xrdef{What are these type and size warnings?-title}{What are these type and si
+ze warnings?}
+@xrdef{What are these type and size warnings?-snt}{Section@tie 1.2.3}
+@xrdef{What are these import warnings?-title}{What are these import warnings?}
+@xrdef{What are these import warnings?-snt}{Section@tie 1.2.4}
+@xrdef{Compatibility and Layout-title}{Compatibility and Layout}
+@xrdef{Compatibility and Layout-snt}{Section@tie 1.3}
+@xrdef{Can I run NeXT OPENSTEP or Mac OS X programs on GNUstep?-title}{Can I ru
+n NeXT OPENSTEP or Mac OS X programs on GNUstep?}
+@xrdef{Can I run NeXT OPENSTEP or Mac OS X programs on GNUstep?-snt}{Section@ti
+e 1.3.1}
+@xrdef{Is GNUstep following changes to OpenStep and Mac OS X?-title}{Is GNUstep
+ following changes to OpenStep and Mac OS X?}
+@xrdef{Is GNUstep following changes to OpenStep and Mac OS X?-snt}{Section@tie 
+1.3.2}
+@xrdef{Do we have to have the NEXTSTEP look and feel?-title}{Do we have to have
+ the NEXTSTEP look and feel?}
+@xrdef{Do we have to have the NEXTSTEP look and feel?-snt}{Section@tie 1.3.3}
+@xrdef{What's up with the directory structure?-title}{What's up with the direct
+ory structure?}
+@xrdef{What's up with the directory structure?-snt}{Section@tie 1.3.4}
+Cross reference values unknown; you must run TeX again. [4
+@xrdef{How do I compile GNUstep on my machine?-pg}{4}
+@xrdef{Are there any precompiled packages available?-pg}{4}
+@xrdef{What are these type and size warnings?-pg}{4}
+@xrdef{What are these import warnings?-pg}{4}
+@xrdef{Compatibility and Layout-pg}{4}
+@xrdef{Can I run NeXT OPENSTEP or Mac OS X programs on GNUstep?-pg}{4}
+@xrdef{Is GNUstep following changes to OpenStep and Mac OS X?-pg}{4}
+@xrdef{Do we have to have the NEXTSTEP look and feel?-pg}{4}
+]
+@xrdef{Why not use framework bundles?-title}{Why not use framework bundles?}
+@xrdef{Why not use framework bundles?-snt}{Section@tie 1.3.5}
+[5
+@xrdef{What's up with the directory structure?-pg}{5}
+@xrdef{Why not use framework bundles?-pg}{5}
+]
+@xrdef{Troubleshooting-title}{Troubleshooting}
+@xrdef{Troubleshooting-snt}{Section@tie 1.4}
+@xrdef{Problems compiling (loading shared libs)-title}{Problems compiling (load
+ing shared libs)}
+@xrdef{Problems compiling (loading shared libs)-snt}{Section@tie 1.4.1}
+
+Overfull \hbox (49.43388pt too wide) in paragraph at lines 351--351
+ []@texttt libgnustep-base.so.1: cannot open shared object file: No such file o
+r directory[] |
+@xrdef{Problems compiling (GNUstep Internal Error)-title}{Problems compiling (G
+NUstep Internal Error)}
+@xrdef{Problems compiling (GNUstep Internal Error)-snt}{Section@tie 1.4.2}
+@xrdef{Problems running tools and compiling-title}{Problems running tools and c
+ompiling}
+@xrdef{Problems running tools and compiling-snt}{Section@tie 1.4.3}
+[6
+@xrdef{Troubleshooting-pg}{6}
+@xrdef{Problems compiling (loading shared libs)-pg}{6}
+@xrdef{Problems compiling (GNUstep Internal Error)-pg}{6}
+@xrdef{Problems running tools and compiling-pg}{6}
+]
+Overfull \hbox (72.42863pt too wide) in paragraph at lines 416--416
+ []@texttt libgnustep-base.so.1.13: cannot restore segment prot after reloc: Pe
+rmission denied[] |
+@xrdef{Problems with gcc3-title}{Problems with gcc3}
+@xrdef{Problems with gcc3-snt}{Section@tie 1.4.4}
+@xrdef{Problems with Alt key-title}{Problems with Alt key}
+@xrdef{Problems with Alt key-snt}{Section@tie 1.4.5}
+@xrdef{Problems with fonts-title}{Problems with fonts}
+@xrdef{Problems with fonts-snt}{Section@tie 1.4.6}
+@xrdef{No characters displayed-title}{No characters displayed.}
+@xrdef{No characters displayed-snt}{Section@tie 1.4.7}
+[7
+@xrdef{Problems with gcc3-pg}{7}
+@xrdef{Problems with Alt key-pg}{7}
+@xrdef{Problems with fonts-pg}{7}
+]
+@xrdef{No Makefile-title}{No Makefile}
+@xrdef{No Makefile-snt}{Section@tie 1.4.8}
+[8
+@xrdef{No characters displayed-pg}{8}
+@xrdef{No Makefile-pg}{8}
+] )
+(see the transcript file for additional information)</usr/share/texmf-dist/font
+s/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+sy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr
+/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on gnustep-userfaq.pdf (7 pages, 100809 bytes).
+Transcript written on gnustep-userfaq.log.
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Mandriva)
+ restricted \write18 enabled.
+entering extended mode
+(./gnustep-userfaq.texi (/usr/share/texmf-dist/tex/texinfo/texinfo.tex
+Loading texinfo [version 2012-07-29.17]: pdf, fonts, markup, glyphs,
+page headings, tables, conditionals, indexing, sectioning, toc, environments,
+defuns, macros, cross references, insertions,
+(/usr/share/texmf-dist/tex/generic/epsf/epsf.tex
+This is `epsf.tex' v2.7.4 <14 February 2011>
+) localization, formatting, and turning on texinfo input format.) Chapter 1
+@xrdef{Top-title}{GNUstep Frequently Asked Questions for Users}
+@xrdef{Top-snt}{Chapter@tie 1}
+@xrdef{GNUstep General Information-title}{GNUstep General Information}
+@xrdef{GNUstep General Information-snt}{Section@tie 1.1}
+@xrdef{What is GNUstep?-title}{What is GNUstep?}
+@xrdef{What is GNUstep?-snt}{Section@tie 1.1.1}
+@xrdef{What is the OpenStep standard?-title}{What is the OpenStep standard?}
+@xrdef{What is the OpenStep standard?-snt}{Section@tie 1.1.2}
+@xrdef{What platforms does GNUstep run on?-title}{What platforms does GNUstep r
+un on?}
+@xrdef{What platforms does GNUstep run on?-snt}{Section@tie 1.1.3}
+@xrdef{Does GNUstep run on Windows?-title}{Does GNUstep run on Windows?}
+@xrdef{Does GNUstep run on Windows?-snt}{Section@tie 1.1.4}
+@xrdef{What is GNUstep's position towards KDE and the GNOME project?-title}{Wha
+t is GNUstep's position towards KDE and the GNOME project?}
+@xrdef{What is GNUstep's position towards KDE and the GNOME project?-snt}{Secti
+on@tie 1.1.5}
+[2
+@xrdef{Top-pg}{2}
+{/usr/share/texmf/fonts/map/pdftex/updmap/pdftex.map}
+@xrdef{GNUstep General Information-pg}{2}
+@xrdef{What is GNUstep?-pg}{2}
+@xrdef{What is the OpenStep standard?-pg}{2}
+@xrdef{What platforms does GNUstep run on?-pg}{2}
+@xrdef{Does GNUstep run on Windows?-pg}{2}
+@xrdef{What is GNUstep's position towards KDE and the GNOME project?-pg}{2}
+]
+@xrdef{How can I get GNUstep?-title}{How can I get GNUstep?}
+@xrdef{How can I get GNUstep?-snt}{Section@tie 1.1.6}
+@xrdef{How do you run GNUstep?-title}{How do you run GNUstep?}
+@xrdef{How do you run GNUstep?-snt}{Section@tie 1.1.7}
+@xrdef{Is there a web site?-title}{Is there a web site?}
+@xrdef{Is there a web site?-snt}{Section@tie 1.1.8}
+@xrdef{When is GNUstep intended to be available?-title}{When is GNUstep intende
+d to be available?}
+@xrdef{When is GNUstep intended to be available?-snt}{Section@tie 1.1.9}
+@xrdef{What is usable?-title}{What is usable?}
+@xrdef{What is usable?-snt}{Section@tie 1.1.10}
+@xrdef{Compiling and Installing-title}{Compiling and Installing}
+@xrdef{Compiling and Installing-snt}{Section@tie 1.2}
+@xrdef{How do I compile GNUstep on my machine?-title}{How do I compile GNUstep 
+on my machine?}
+@xrdef{How do I compile GNUstep on my machine?-snt}{Section@tie 1.2.1}
+[3
+@xrdef{How can I get GNUstep?-pg}{3}
+@xrdef{How do you run GNUstep?-pg}{3}
+@xrdef{Is there a web site?-pg}{3}
+@xrdef{When is GNUstep intended to be available?-pg}{3}
+@xrdef{What is usable?-pg}{3}
+@xrdef{Compiling and Installing-pg}{3}
+]
+@xrdef{Are there any precompiled packages available?-title}{Are there any preco
+mpiled packages available?}
+@xrdef{Are there any precompiled packages available?-snt}{Section@tie 1.2.2}
+@xrdef{What are these type and size warnings?-title}{What are these type and si
+ze warnings?}
+@xrdef{What are these type and size warnings?-snt}{Section@tie 1.2.3}
+@xrdef{What are these import warnings?-title}{What are these import warnings?}
+@xrdef{What are these import warnings?-snt}{Section@tie 1.2.4}
+@xrdef{Compatibility and Layout-title}{Compatibility and Layout}
+@xrdef{Compatibility and Layout-snt}{Section@tie 1.3}
+@xrdef{Can I run NeXT OPENSTEP or Mac OS X programs on GNUstep?-title}{Can I ru
+n NeXT OPENSTEP or Mac OS X programs on GNUstep?}
+@xrdef{Can I run NeXT OPENSTEP or Mac OS X programs on GNUstep?-snt}{Section@ti
+e 1.3.1}
+@xrdef{Is GNUstep following changes to OpenStep and Mac OS X?-title}{Is GNUstep
+ following changes to OpenStep and Mac OS X?}
+@xrdef{Is GNUstep following changes to OpenStep and Mac OS X?-snt}{Section@tie 
+1.3.2}
+@xrdef{Do we have to have the NEXTSTEP look and feel?-title}{Do we have to have
+ the NEXTSTEP look and feel?}
+@xrdef{Do we have to have the NEXTSTEP look and feel?-snt}{Section@tie 1.3.3}
+@xrdef{What's up with the directory structure?-title}{What's up with the direct
+ory structure?}
+@xrdef{What's up with the directory structure?-snt}{Section@tie 1.3.4}
+Cross reference values unknown; you must run TeX again. [4
+@xrdef{How do I compile GNUstep on my machine?-pg}{4}
+@xrdef{Are there any precompiled packages available?-pg}{4}
+@xrdef{What are these type and size warnings?-pg}{4}
+@xrdef{What are these import warnings?-pg}{4}
+@xrdef{Compatibility and Layout-pg}{4}
+@xrdef{Can I run NeXT OPENSTEP or Mac OS X programs on GNUstep?-pg}{4}
+@xrdef{Is GNUstep following changes to OpenStep and Mac OS X?-pg}{4}
+@xrdef{Do we have to have the NEXTSTEP look and feel?-pg}{4}
+]
+@xrdef{Why not use framework bundles?-title}{Why not use framework bundles?}
+@xrdef{Why not use framework bundles?-snt}{Section@tie 1.3.5}
+[5
+@xrdef{What's up with the directory structure?-pg}{5}
+@xrdef{Why not use framework bundles?-pg}{5}
+]
+@xrdef{Troubleshooting-title}{Troubleshooting}
+@xrdef{Troubleshooting-snt}{Section@tie 1.4}
+@xrdef{Problems compiling (loading shared libs)-title}{Problems compiling (load
+ing shared libs)}
+@xrdef{Problems compiling (loading shared libs)-snt}{Section@tie 1.4.1}
+
+Overfull \hbox (49.43388pt too wide) in paragraph at lines 351--351
+ []@texttt libgnustep-base.so.1: cannot open shared object file: No such file o
+r directory[] |
+@xrdef{Problems compiling (GNUstep Internal Error)-title}{Problems compiling (G
+NUstep Internal Error)}
+@xrdef{Problems compiling (GNUstep Internal Error)-snt}{Section@tie 1.4.2}
+@xrdef{Problems running tools and compiling-title}{Problems running tools and c
+ompiling}
+@xrdef{Problems running tools and compiling-snt}{Section@tie 1.4.3}
+[6
+@xrdef{Troubleshooting-pg}{6}
+@xrdef{Problems compiling (loading shared libs)-pg}{6}
+@xrdef{Problems compiling (GNUstep Internal Error)-pg}{6}
+@xrdef{Problems running tools and compiling-pg}{6}
+]
+Overfull \hbox (72.42863pt too wide) in paragraph at lines 416--416
+ []@texttt libgnustep-base.so.1.13: cannot restore segment prot after reloc: Pe
+rmission denied[] |
+@xrdef{Problems with gcc3-title}{Problems with gcc3}
+@xrdef{Problems with gcc3-snt}{Section@tie 1.4.4}
+@xrdef{Problems with Alt key-title}{Problems with Alt key}
+@xrdef{Problems with Alt key-snt}{Section@tie 1.4.5}
+@xrdef{Problems with fonts-title}{Problems with fonts}
+@xrdef{Problems with fonts-snt}{Section@tie 1.4.6}
+@xrdef{No characters displayed-title}{No characters displayed.}
+@xrdef{No characters displayed-snt}{Section@tie 1.4.7}
+[7
+@xrdef{Problems with gcc3-pg}{7}
+@xrdef{Problems with Alt key-pg}{7}
+@xrdef{Problems with fonts-pg}{7}
+]
+@xrdef{No Makefile-title}{No Makefile}
+@xrdef{No Makefile-snt}{Section@tie 1.4.8}
+[8
+@xrdef{No characters displayed-pg}{8}
+@xrdef{No Makefile-pg}{8}
+] )
+(see the transcript file for additional information)</usr/share/texmf-dist/font
+s/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+sy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr
+/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on gnustep-userfaq.pdf (7 pages, 100809 bytes).
+Transcript written on gnustep-userfaq.log.
+texi2html -split_chapter -expandinfo -init_file gnustep.init  \
+	gnustep-userfaq.texi
+Making all for textdoc INSTALL...
+makeinfo -D NO-TEXI2HTML -D TEXT-ONLY --no-header --no-split  \
+	-o INSTALL install.texi
+Making all for textdoc README...
+makeinfo -D NO-TEXI2HTML -D TEXT-ONLY --no-header --no-split  \
+	-o README readme.texi
+Making all for textdoc NEWS...
+makeinfo -D NO-TEXI2HTML -D TEXT-ONLY --no-header --no-split  \
+	-o NEWS news.texi
+Making all for textdoc RELEASENOTES...
+makeinfo -D NO-TEXI2HTML -D TEXT-ONLY --no-header --no-split  \
+	-o RELEASENOTES releasenotes.texi
+Making all for textdoc ANNOUNCE...
+makeinfo -D NO-TEXI2HTML -D TEXT-ONLY --no-header --no-split  \
+	-o ANNOUNCE announce.texi
+make[1]: Leaving directory `/home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation'
++ exit 0
+Executing(%install): /bin/sh -e /var/tmp/rpm-tmp.88569
++ umask 022
++ cd /home/bero/abf/gnustep-make/BUILD
++ /bin/rm -rf /home/bero/abf/gnustep-make/BUILDROOT/gnustep-make-2.6.2-3-mdv2013.0.x86_64-buildroot
++ /bin/mkdir -p /home/bero/abf/gnustep-make/BUILDROOT/gnustep-make-2.6.2-3-mdv2013.0.x86_64-buildroot
++ cd gnustep-make-2.6.2
++ '[' 1 -eq 1 ']'
++ rm -rf /home/bero/abf/gnustep-make/BUILDROOT/gnustep-make-2.6.2-3-mdv2013.0.x86_64-buildroot
++ make DESTDIR=/home/bero/abf/gnustep-make/BUILDROOT/gnustep-make-2.6.2-3-mdv2013.0.x86_64-buildroot install
+Creating system tools directory: /home/bero/abf/gnustep-make/BUILDROOT/gnustep-make-2.6.2-3-mdv2013.0.x86_64-buildroot/usr/bin
+Creating makefile directories in: /home/bero/abf/gnustep-make/BUILDROOT/gnustep-make-2.6.2-3-mdv2013.0.x86_64-buildroot/usr/share/GNUstep/Makefiles
+Installing GNUstep configuration file in /home/bero/abf/gnustep-make/BUILDROOT/gnustep-make-2.6.2-3-mdv2013.0.x86_64-buildroot/etc/GNUstep/GNUstep.conf
+Installing gnustep-make support software
+Installing makefiles
+Installing Test Framework scripts
+Installing Test Framework support files
+Installing (and compressing) manpages
++ cd Documentation
++ make install
+** Running 'make install' using the local/temporary gnustep-make installation **
+make install GNUSTEP_MAKEFILES="/home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation/System/Library/Makefiles"
+This is gnustep-make 2.6.2. Type 'make print-gnustep-make-help' for help.
+make[1]: Entering directory `/home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation'
+/home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation/System/Library/Makefiles/common.make:857: WARNING: Your PATH may not be set up correctly !
+/home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation/System/Library/Makefiles/common.make:858: Please try again after adding "/home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation/System/Tools" to your path
+Making all for doc gnustep-howto...
+texi2html -split_chapter -expandinfo -init_file gnustep.init  \
+	gnustep-howto.texi
+Making all for doc gnustep-faq...
+texi2html -split_chapter -expandinfo -init_file gnustep.init  \
+	gnustep-faq.texi
+Making all for doc gnustep-filesystem...
+texi2html -split_chapter -expandinfo -init_file gnustep.init  \
+	gnustep-filesystem.texi
+Making all for doc gnustep-internals...
+make[2]: Nothing to be done for `internal-doc-all'.
+Making all for doc gnustep-make...
+texi2html -split_chapter -expandinfo -init_file gnustep.init  \
+	gnustep-make.texi
+Making all for doc gnustep-userfaq...
+texi2html -split_chapter -expandinfo -init_file gnustep.init  \
+	gnustep-userfaq.texi
+Making all for textdoc INSTALL...
+make[2]: Nothing to be done for `internal-textdoc-all'.
+Making all for textdoc README...
+make[2]: Nothing to be done for `internal-textdoc-all'.
+Making all for textdoc NEWS...
+make[2]: Nothing to be done for `internal-textdoc-all'.
+Making all for textdoc RELEASENOTES...
+make[2]: Nothing to be done for `internal-textdoc-all'.
+Making all for textdoc ANNOUNCE...
+make[2]: Nothing to be done for `internal-textdoc-all'.
+Making install for doc gnustep-howto...
+ Creating /home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation/System/Library/Documentation/User/GNUstep/...
+ Creating /home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation/System/Library/Documentation/info...
+if [ -f gnustep-howto.pdf ]; then \
+  /usr/bin/install -c -p  -m 644 gnustep-howto.pdf \
+                /home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation/System/Library/Documentation/User/GNUstep/; \
+fi
+if [ -f gnustep-howto.info ]; then \
+  /usr/bin/install -c -p  -m 644 gnustep-howto.info* /home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation/System/Library/Documentation/info; \
+fi
+if [ -f gnustep-howto_toc.html ]; then \
+  /usr/bin/install -c -p  -m 644 gnustep-howto_*.html \
+                  /home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation/System/Library/Documentation/User/GNUstep/; \
+fi
+if [ -f gnustep-howto.html ]; then \
+  /usr/bin/install -c -p  -m 644 gnustep-howto.html \
+                  /home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation/System/Library/Documentation/User/GNUstep/; \
+  /usr/bin/install -c -p  -m 644 gnustep-howto_*.html \
+                  /home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation/System/Library/Documentation/User/GNUstep/; \
+fi
+Making install for doc gnustep-faq...
+if [ -f gnustep-faq.pdf ]; then \
+  /usr/bin/install -c -p  -m 644 gnustep-faq.pdf \
+                /home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation/System/Library/Documentation/User/GNUstep/; \
+fi
+if [ -f gnustep-faq.info ]; then \
+  /usr/bin/install -c -p  -m 644 gnustep-faq.info* /home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation/System/Library/Documentation/info; \
+fi
+if [ -f gnustep-faq_toc.html ]; then \
+  /usr/bin/install -c -p  -m 644 gnustep-faq_*.html \
+                  /home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation/System/Library/Documentation/User/GNUstep/; \
+fi
+if [ -f gnustep-faq.html ]; then \
+  /usr/bin/install -c -p  -m 644 gnustep-faq.html \
+                  /home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation/System/Library/Documentation/User/GNUstep/; \
+  /usr/bin/install -c -p  -m 644 gnustep-faq_*.html \
+                  /home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation/System/Library/Documentation/User/GNUstep/; \
+fi
+Making install for doc gnustep-filesystem...
+if [ -f gnustep-filesystem.pdf ]; then \
+  /usr/bin/install -c -p  -m 644 gnustep-filesystem.pdf \
+                /home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation/System/Library/Documentation/User/GNUstep/; \
+fi
+if [ -f gnustep-filesystem.info ]; then \
+  /usr/bin/install -c -p  -m 644 gnustep-filesystem.info* /home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation/System/Library/Documentation/info; \
+fi
+if [ -f gnustep-filesystem_toc.html ]; then \
+  /usr/bin/install -c -p  -m 644 gnustep-filesystem_*.html \
+                  /home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation/System/Library/Documentation/User/GNUstep/; \
+fi
+if [ -f gnustep-filesystem.html ]; then \
+  /usr/bin/install -c -p  -m 644 gnustep-filesystem.html \
+                  /home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation/System/Library/Documentation/User/GNUstep/; \
+  /usr/bin/install -c -p  -m 644 gnustep-filesystem_*.html \
+                  /home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation/System/Library/Documentation/User/GNUstep/; \
+fi
+Making install for doc gnustep-internals...
+ Creating /home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation/System/Library/Documentation/Developer/Make/Manual/Internals/...
+/usr/bin/install -c -p  -m 644 gnustep-internals.ps \
+                /home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation/System/Library/Documentation/Developer/Make/Manual/Internals/
+/usr/bin/install -c -p  -m 644 gnustep-internals/*.html \
+                /home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation/System/Library/Documentation/Developer/Make/Manual/Internals/
+/usr/bin/install -c -p  -m 644 gnustep-internals/*.css \
+                /home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation/System/Library/Documentation/Developer/Make/Manual/Internals/
+Making install for doc gnustep-make...
+if [ -f gnustep-make.pdf ]; then \
+  /usr/bin/install -c -p  -m 644 gnustep-make.pdf \
+                /home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation/System/Library/Documentation/Developer/Make/Manual/; \
+fi
+if [ -f gnustep-make.info ]; then \
+  /usr/bin/install -c -p  -m 644 gnustep-make.info* /home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation/System/Library/Documentation/info; \
+fi
+if [ -f gnustep-make_toc.html ]; then \
+  /usr/bin/install -c -p  -m 644 gnustep-make_*.html \
+                  /home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation/System/Library/Documentation/Developer/Make/Manual/; \
+fi
+if [ -f gnustep-make.html ]; then \
+  /usr/bin/install -c -p  -m 644 gnustep-make.html \
+                  /home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation/System/Library/Documentation/Developer/Make/Manual/; \
+  /usr/bin/install -c -p  -m 644 gnustep-make_*.html \
+                  /home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation/System/Library/Documentation/Developer/Make/Manual/; \
+fi
+Making install for doc gnustep-userfaq...
+if [ -f gnustep-userfaq.pdf ]; then \
+  /usr/bin/install -c -p  -m 644 gnustep-userfaq.pdf \
+                /home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation/System/Library/Documentation/User/GNUstep/; \
+fi
+if [ -f gnustep-userfaq.info ]; then \
+  /usr/bin/install -c -p  -m 644 gnustep-userfaq.info* /home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation/System/Library/Documentation/info; \
+fi
+if [ -f gnustep-userfaq_toc.html ]; then \
+  /usr/bin/install -c -p  -m 644 gnustep-userfaq_*.html \
+                  /home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation/System/Library/Documentation/User/GNUstep/; \
+fi
+if [ -f gnustep-userfaq.html ]; then \
+  /usr/bin/install -c -p  -m 644 gnustep-userfaq.html \
+                  /home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation/System/Library/Documentation/User/GNUstep/; \
+  /usr/bin/install -c -p  -m 644 gnustep-userfaq_*.html \
+                  /home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation/System/Library/Documentation/User/GNUstep/; \
+fi
+Making install for textdoc INSTALL...
+ Creating /home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation/System/Library/Documentation/Developer/Make/ReleaseNotes/2.6.2...
+Making install for textdoc README...
+Making install for textdoc NEWS...
+Making install for textdoc RELEASENOTES...
+Making install for textdoc ANNOUNCE...
+/usr/bin/install -c -p  -m 644 DESIGN /home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation/System/Library/Documentation/Developer/Make/Manual
+for file in README.Darwin README.MinGWOnCygwin README.Cygwin README.MinGW; do \
+  /usr/bin/install -c -p  -m 644 $file /home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation/tmp-installation/System/Library/Documentation/User/GNUstep/$file; \
+done
+make[1]: Leaving directory `/home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2/Documentation'
++ mkdir -p /home/bero/abf/gnustep-make/BUILDROOT/gnustep-make-2.6.2-3-mdv2013.0.x86_64-buildroot//usr/share/GNUstep
++ cd tmp-installation/System/Library/Documentation
++ cp -fr info /home/bero/abf/gnustep-make/BUILDROOT/gnustep-make-2.6.2-3-mdv2013.0.x86_64-buildroot//usr/share/GNUstep/
++ '[' -n '' ']'
++ /usr/share/spec-helper/clean_files
++ '[' -n '' ']'
++ /usr/share/spec-helper/compress_files .xz
++ '[' -n '' ']'
++ /usr/share/spec-helper/relink_symlinks
++ '[' -n '' ']'
++ /usr/share/spec-helper/clean_perl
++ '[' -n '' ']'
++ /usr/share/spec-helper/lib_symlinks
++ '[' -n '' ']'
++ /usr/share/spec-helper/gprintify
++ '[' -n '' ']'
++ /usr/share/spec-helper/fix_mo
++ '[' -n '' ']'
++ /usr/share/spec-helper/fix_file_permissions
++ '[' -n '' ']'
++ /usr/share/spec-helper/fix_pamd
++ '[' -n '' ']'
++ /usr/share/spec-helper/remove_info_dir
++ '[' -n '' ']'
++ /usr/share/spec-helper/remove_libtool_files
++ '[' -n '' ']'
++ /usr/share/spec-helper/fix_eol
++ '[' -n '' ']'
++ /usr/share/spec-helper/check_elf_files
++ '[' -n '' ']'
++ export DISABLE_DEBUG=1
++ DISABLE_DEBUG=1
++ /usr/lib/rpm/find-debuginfo.sh -r /home/bero/abf/gnustep-make/BUILD/gnustep-make-2.6.2
+
+Processing files: gnustep-make-2.6.2-3.x86_64
+Executing(%doc): /bin/sh -e /var/tmp/rpm-tmp.93069
++ umask 022
++ cd /home/bero/abf/gnustep-make/BUILD
++ cd gnustep-make-2.6.2
++ DOCDIR=/home/bero/abf/gnustep-make/BUILDROOT/gnustep-make-2.6.2-3-mdv2013.0.x86_64-buildroot/usr/share/doc/gnustep-make
++ export DOCDIR
++ /bin/mkdir -p /home/bero/abf/gnustep-make/BUILDROOT/gnustep-make-2.6.2-3-mdv2013.0.x86_64-buildroot/usr/share/doc/gnustep-make
++ cp -pr ANNOUNCE ChangeLog FAQ GNUstep-HOWTO NEWS README RELEASENOTES Version /home/bero/abf/gnustep-make/BUILDROOT/gnustep-make-2.6.2-3-mdv2013.0.x86_64-buildroot/usr/share/doc/gnustep-make
++ cp -pr Documentation/tmp-installation/System/Library/Documentation/Developer /home/bero/abf/gnustep-make/BUILDROOT/gnustep-make-2.6.2-3-mdv2013.0.x86_64-buildroot/usr/share/doc/gnustep-make
++ cp -pr Documentation/tmp-installation/System/Library/Documentation/User /home/bero/abf/gnustep-make/BUILDROOT/gnustep-make-2.6.2-3-mdv2013.0.x86_64-buildroot/usr/share/doc/gnustep-make
++ exit 0
+Checking for unpackaged file(s): /usr/lib/rpm/check-files /home/bero/abf/gnustep-make/BUILDROOT/gnustep-make-2.6.2-3-mdv2013.0.x86_64-buildroot
+Wrote: /home/bero/abf/gnustep-make/RPMS/x86_64/gnustep-make-2.6.2-3-mdv2013.0.x86_64.rpm
+Executing "/usr/bin/rpmlint -T -f /home/bero/abf/gnustep-make/gnustep-make.rpmlintrc /home/bero/abf/gnustep-make/RPMS/x86_64/gnustep-make-2.6.2-3-mdv2013.0.x86_64.rpm":
+gnustep-make.x86_64: W: non-conffile-in-etc /etc/GNUstep/GNUstep.conf
+
+gnustep-make.x86_64: W: no-packager-tag
+
+gnustep-make.x86_64: W: no-manual-page-for-binary gnustep-tests
+
+gnustep-make.x86_64: E: no-binary (Badness: 1)
+
+gnustep-make.x86_64: W: install-file-in-docs /usr/share/doc/gnustep-make/Developer/Make/ReleaseNotes/2.6.2/INSTALL
+
+gnustep-make.x86_64: W: devel-file-in-non-devel-package /usr/bin/gnustep-config
+
+gnustep-make.x86_64: W: devel-file-in-non-devel-package /usr/share/GNUstep/Makefiles/TestFramework/ObjectTesting.h
+
+gnustep-make.x86_64: W: devel-file-in-non-devel-package /usr/share/GNUstep/Makefiles/TestFramework/Testing.h
+
+1 packages and 0 specfiles checked; 1 errors, 7 warnings.
+Executing(%clean): /bin/sh -e /var/tmp/rpm-tmp.34452
++ umask 022
++ cd /home/bero/abf/gnustep-make/BUILD
++ cd gnustep-make-2.6.2
++ /bin/rm -rf /home/bero/abf/gnustep-make/BUILDROOT/gnustep-make-2.6.2-3-mdv2013.0.x86_64-buildroot

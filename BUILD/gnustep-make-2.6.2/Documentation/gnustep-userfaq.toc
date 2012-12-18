@@ -1,0 +1,32 @@
+@numchapentry{GNUstep Frequently Asked Questions for Users}{1}{Top}{2}
+@numsecentry{GNUstep General Information}{1.1}{GNUstep General Information}{2}
+@numsubsecentry{What is GNUstep?}{1.1.1}{What is GNUstep?}{2}
+@numsubsecentry{What is the OpenStep standard?}{1.1.2}{What is the OpenStep standard?}{2}
+@numsubsecentry{What platforms does GNUstep run on?}{1.1.3}{What platforms does GNUstep run on?}{2}
+@numsubsecentry{Does GNUstep run on Windows?}{1.1.4}{Does GNUstep run on Windows?}{2}
+@numsubsecentry{What is GNUstep's position towards KDE and the GNOME project?}{1.1.5}{What is GNUstep's position towards KDE and the GNOME project?}{2}
+@numsubsecentry{How can I get GNUstep?}{1.1.6}{How can I get GNUstep?}{3}
+@numsubsecentry{How do you run GNUstep?}{1.1.7}{How do you run GNUstep?}{3}
+@numsubsecentry{Is there a web site?}{1.1.8}{Is there a web site?}{3}
+@numsubsecentry{When is GNUstep intended to be available?}{1.1.9}{When is GNUstep intended to be available?}{3}
+@numsubsecentry{What is usable?}{1.1.10}{What is usable?}{3}
+@numsecentry{Compiling and Installing}{1.2}{Compiling and Installing}{3}
+@numsubsecentry{How do I compile GNUstep on my machine?}{1.2.1}{How do I compile GNUstep on my machine?}{4}
+@numsubsecentry{Are there any precompiled packages available?}{1.2.2}{Are there any precompiled packages available?}{4}
+@numsubsecentry{What are these type and size warnings?}{1.2.3}{What are these type and size warnings?}{4}
+@numsubsecentry{What are these import warnings?}{1.2.4}{What are these import warnings?}{4}
+@numsecentry{Compatibility and Layout}{1.3}{Compatibility and Layout}{4}
+@numsubsecentry{Can I run NeXT OPENSTEP or Mac OS X programs on GNUstep?}{1.3.1}{Can I run NeXT OPENSTEP or Mac OS X programs on GNUstep?}{4}
+@numsubsecentry{Is GNUstep following changes to OpenStep and Mac OS X?}{1.3.2}{Is GNUstep following changes to OpenStep and Mac OS X?}{4}
+@numsubsecentry{Do we have to have the NEXTSTEP look and feel?}{1.3.3}{Do we have to have the NEXTSTEP look and feel?}{4}
+@numsubsecentry{What's up with the directory structure?}{1.3.4}{What's up with the directory structure?}{5}
+@numsubsecentry{Why not use framework bundles?}{1.3.5}{Why not use framework bundles?}{5}
+@numsecentry{Troubleshooting}{1.4}{Troubleshooting}{6}
+@numsubsecentry{Problems compiling (loading shared libs)}{1.4.1}{Problems compiling (loading shared libs)}{6}
+@numsubsecentry{Problems compiling (GNUstep Internal Error)}{1.4.2}{Problems compiling (GNUstep Internal Error)}{6}
+@numsubsecentry{Problems running tools and compiling}{1.4.3}{Problems running tools and compiling}{6}
+@numsubsecentry{Problems with gcc3}{1.4.4}{Problems with gcc3}{7}
+@numsubsecentry{Problems with Alt key}{1.4.5}{Problems with Alt key}{7}
+@numsubsecentry{Problems with fonts}{1.4.6}{Problems with fonts}{7}
+@numsubsecentry{No characters displayed.}{1.4.7}{No characters displayed}{8}
+@numsubsecentry{No Makefile}{1.4.8}{No Makefile}{8}

@@ -1,0 +1,326 @@
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Mandriva) (format=pdfetex 2012.12.12)  18 DEC 2012 23:07
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**./gnustep-userfaq.texi
+(./gnustep-userfaq.texi (/usr/share/texmf-dist/tex/texinfo/texinfo.tex
+Loading texinfo [version 2012-07-29.17]:
+\bindingoffset=\dimen16
+\normaloffset=\dimen17
+\pagewidth=\dimen18
+\pageheight=\dimen19
+\outerhsize=\dimen20
+\outervsize=\dimen21
+\cornerlong=\dimen22
+\cornerthick=\dimen23
+\topandbottommargin=\dimen24
+\headlinebox=\box16
+\footlinebox=\box17
+\margin=\insert252
+\EMsimple=\toks13
+\groupbox=\box18
+\groupinvalidhelp=\toks14
+\mil=\dimen25
+\exdentamount=\skip18
+\inmarginspacing=\skip19
+\centerpenalty=\count27
+ pdf,
+\tempnum=\count28
+\lnkcount=\count29
+\filename=\toks15
+\filenamelength=\count30
+\pgn=\count31
+\toksA=\toks16
+\toksB=\toks17
+\toksC=\toks18
+\toksD=\toks19
+\boxA=\box19
+\countA=\count32
+\nopdfimagehelp=\toks20
+ fonts,
+\sffam=\fam8
+\textleading=\dimen26
+ markup,
+\fontdepth=\count33
+ glyphs,
+\errorbox=\box20
+
+page headings,
+\titlepagetopglue=\skip20
+\titlepagebottomglue=\skip21
+\evenheadline=\toks21
+\oddheadline=\toks22
+\evenfootline=\toks23
+\oddfootline=\toks24
+ tables,
+\tableindent=\dimen27
+\itemindent=\dimen28
+\itemmargin=\dimen29
+\itemmax=\dimen30
+\itemno=\count34
+\multitableparskip=\skip22
+\multitableparindent=\skip23
+\multitablecolspace=\dimen31
+\multitablelinespace=\skip24
+\colcount=\count35
+\everytab=\toks25
+ conditionals,
+\doignorecount=\count36
+ indexing,
+\whatsitskip=\skip25
+\whatsitpenalty=\count37
+\secondaryindent=\skip26
+\partialpage=\box21
+\doublecolumnhsize=\dimen32
+ sectioning,
+\unnumberedno=\count38
+\chapno=\count39
+\secno=\count40
+\subsecno=\count41
+\subsubsecno=\count42
+\appendixno=\count43
+\absseclevel=\count44
+\secbase=\count45
+\chapheadingskip=\skip27
+\secheadingskip=\skip28
+\subsecheadingskip=\skip29
+ toc,
+\tocfile=\write0
+\contentsrightmargin=\skip30
+\savepageno=\count46
+\lastnegativepageno=\count47
+\tocindent=\dimen33
+ environments,
+\lispnarrowing=\skip31
+\envskipamount=\skip32
+\circthick=\dimen34
+\cartouter=\dimen35
+\cartinner=\dimen36
+\normbskip=\skip33
+\normpskip=\skip34
+\normlskip=\skip35
+\lskip=\skip36
+\rskip=\skip37
+\nonfillparindent=\dimen37
+\tabw=\dimen38
+\verbbox=\box22
+
+defuns,
+\defbodyindent=\skip38
+\defargsindent=\skip39
+\deflastargmargin=\skip40
+\defunpenalty=\count48
+\parencount=\count49
+\brackcount=\count50
+ macros,
+\paramno=\count51
+\macname=\toks26
+ cross references,
+\auxfile=\write1
+\savesfregister=\count52
+\toprefbox=\box23
+\printedrefnamebox=\box24
+\infofilenamebox=\box25
+\printedmanualbox=\box26
+ insertions,
+\footnoteno=\count53
+\SAVEfootins=\box27
+\SAVEmargin=\box28
+
+(/usr/share/texmf-dist/tex/generic/epsf/epsf.tex
+This is `epsf.tex' v2.7.4 <14 February 2011>
+\epsffilein=\read1
+\epsfframemargin=\dimen39
+\epsfframethickness=\dimen40
+\epsfrsize=\dimen41
+\epsftmp=\dimen42
+\epsftsize=\dimen43
+\epsfxsize=\dimen44
+\epsfysize=\dimen45
+\pspoints=\dimen46
+)
+\noepsfhelp=\toks27
+ localization,
+\nolanghelp=\toks28
+\countUTFx=\count54
+\countUTFy=\count55
+\countUTFz=\count56
+ formatting,
+\defaultparindent=\dimen47
+ and turning on texinfo input format.) Chapter 1
+\openout0 = `gnustep-userfaq.toc'.
+
+
+@xrdef{Top-title}{GNUstep Frequently Asked Questions for Users}
+@xrdef{Top-snt}{Chapter@tie 1}
+@xrdef{GNUstep General Information-title}{GNUstep General Information}
+@xrdef{GNUstep General Information-snt}{Section@tie 1.1}
+@xrdef{What is GNUstep?-title}{What is GNUstep?}
+@xrdef{What is GNUstep?-snt}{Section@tie 1.1.1}
+@xrdef{What is the OpenStep standard?-title}{What is the OpenStep standard?}
+@xrdef{What is the OpenStep standard?-snt}{Section@tie 1.1.2}
+@xrdef{What platforms does GNUstep run on?-title}{What platforms does GNUstep r
+un on?}
+@xrdef{What platforms does GNUstep run on?-snt}{Section@tie 1.1.3}
+@xrdef{Does GNUstep run on Windows?-title}{Does GNUstep run on Windows?}
+@xrdef{Does GNUstep run on Windows?-snt}{Section@tie 1.1.4}
+@xrdef{What is GNUstep's position towards KDE and the GNOME project?-title}{Wha
+t is GNUstep's position towards KDE and the GNOME project?}
+@xrdef{What is GNUstep's position towards KDE and the GNOME project?-snt}{Secti
+on@tie 1.1.5}
+[2
+@xrdef{Top-pg}{2}
+{/usr/share/texmf/fonts/map/pdftex/updmap/pdftex.map}
+@xrdef{GNUstep General Information-pg}{2}
+@xrdef{What is GNUstep?-pg}{2}
+@xrdef{What is the OpenStep standard?-pg}{2}
+@xrdef{What platforms does GNUstep run on?-pg}{2}
+@xrdef{Does GNUstep run on Windows?-pg}{2}
+@xrdef{What is GNUstep's position towards KDE and the GNOME project?-pg}{2}
+]
+@xrdef{How can I get GNUstep?-title}{How can I get GNUstep?}
+@xrdef{How can I get GNUstep?-snt}{Section@tie 1.1.6}
+@xrdef{How do you run GNUstep?-title}{How do you run GNUstep?}
+@xrdef{How do you run GNUstep?-snt}{Section@tie 1.1.7}
+@xrdef{Is there a web site?-title}{Is there a web site?}
+@xrdef{Is there a web site?-snt}{Section@tie 1.1.8}
+@xrdef{When is GNUstep intended to be available?-title}{When is GNUstep intende
+d to be available?}
+@xrdef{When is GNUstep intended to be available?-snt}{Section@tie 1.1.9}
+@xrdef{What is usable?-title}{What is usable?}
+@xrdef{What is usable?-snt}{Section@tie 1.1.10}
+@xrdef{Compiling and Installing-title}{Compiling and Installing}
+@xrdef{Compiling and Installing-snt}{Section@tie 1.2}
+@xrdef{How do I compile GNUstep on my machine?-title}{How do I compile GNUstep 
+on my machine?}
+@xrdef{How do I compile GNUstep on my machine?-snt}{Section@tie 1.2.1}
+[3
+@xrdef{How can I get GNUstep?-pg}{3}
+@xrdef{How do you run GNUstep?-pg}{3}
+@xrdef{Is there a web site?-pg}{3}
+@xrdef{When is GNUstep intended to be available?-pg}{3}
+@xrdef{What is usable?-pg}{3}
+@xrdef{Compiling and Installing-pg}{3}
+]
+@xrdef{Are there any precompiled packages available?-title}{Are there any preco
+mpiled packages available?}
+@xrdef{Are there any precompiled packages available?-snt}{Section@tie 1.2.2}
+@xrdef{What are these type and size warnings?-title}{What are these type and si
+ze warnings?}
+@xrdef{What are these type and size warnings?-snt}{Section@tie 1.2.3}
+@xrdef{What are these import warnings?-title}{What are these import warnings?}
+@xrdef{What are these import warnings?-snt}{Section@tie 1.2.4}
+@xrdef{Compatibility and Layout-title}{Compatibility and Layout}
+@xrdef{Compatibility and Layout-snt}{Section@tie 1.3}
+@xrdef{Can I run NeXT OPENSTEP or Mac OS X programs on GNUstep?-title}{Can I ru
+n NeXT OPENSTEP or Mac OS X programs on GNUstep?}
+@xrdef{Can I run NeXT OPENSTEP or Mac OS X programs on GNUstep?-snt}{Section@ti
+e 1.3.1}
+@xrdef{Is GNUstep following changes to OpenStep and Mac OS X?-title}{Is GNUstep
+ following changes to OpenStep and Mac OS X?}
+@xrdef{Is GNUstep following changes to OpenStep and Mac OS X?-snt}{Section@tie 
+1.3.2}
+@xrdef{Do we have to have the NEXTSTEP look and feel?-title}{Do we have to have
+ the NEXTSTEP look and feel?}
+@xrdef{Do we have to have the NEXTSTEP look and feel?-snt}{Section@tie 1.3.3}
+@xrdef{What's up with the directory structure?-title}{What's up with the direct
+ory structure?}
+@xrdef{What's up with the directory structure?-snt}{Section@tie 1.3.4}
+Cross reference values unknown; you must run TeX again. [4
+@xrdef{How do I compile GNUstep on my machine?-pg}{4}
+@xrdef{Are there any precompiled packages available?-pg}{4}
+@xrdef{What are these type and size warnings?-pg}{4}
+@xrdef{What are these import warnings?-pg}{4}
+@xrdef{Compatibility and Layout-pg}{4}
+@xrdef{Can I run NeXT OPENSTEP or Mac OS X programs on GNUstep?-pg}{4}
+@xrdef{Is GNUstep following changes to OpenStep and Mac OS X?-pg}{4}
+@xrdef{Do we have to have the NEXTSTEP look and feel?-pg}{4}
+]
+@xrdef{Why not use framework bundles?-title}{Why not use framework bundles?}
+@xrdef{Why not use framework bundles?-snt}{Section@tie 1.3.5}
+[5
+@xrdef{What's up with the directory structure?-pg}{5}
+@xrdef{Why not use framework bundles?-pg}{5}
+]
+@xrdef{Troubleshooting-title}{Troubleshooting}
+@xrdef{Troubleshooting-snt}{Section@tie 1.4}
+@xrdef{Problems compiling (loading shared libs)-title}{Problems compiling (load
+ing shared libs)}
+@xrdef{Problems compiling (loading shared libs)-snt}{Section@tie 1.4.1}
+
+Overfull \hbox (49.43388pt too wide) in paragraph at lines 351--351
+ []@texttt libgnustep-base.so.1: cannot open shared object file: No such file o
+r directory[] |
+
+@hbox(6.69167+2.43333)x433.62
+.@glue(@leftskip) 28.90755
+.@hbox(0.0+0.0)x0.0
+.@texttt l
+.@texttt i
+.@texttt b
+.etc.
+
+@xrdef{Problems compiling (GNUstep Internal Error)-title}{Problems compiling (G
+NUstep Internal Error)}
+@xrdef{Problems compiling (GNUstep Internal Error)-snt}{Section@tie 1.4.2}
+@xrdef{Problems running tools and compiling-title}{Problems running tools and c
+ompiling}
+@xrdef{Problems running tools and compiling-snt}{Section@tie 1.4.3}
+[6
+@xrdef{Troubleshooting-pg}{6}
+@xrdef{Problems compiling (loading shared libs)-pg}{6}
+@xrdef{Problems compiling (GNUstep Internal Error)-pg}{6}
+@xrdef{Problems running tools and compiling-pg}{6}
+]
+Overfull \hbox (72.42863pt too wide) in paragraph at lines 416--416
+ []@texttt libgnustep-base.so.1.13: cannot restore segment prot after reloc: Pe
+rmission denied[] |
+
+@hbox(6.69167+2.43333)x433.62
+.@glue(@leftskip) 28.90755
+.@hbox(0.0+0.0)x0.0
+.@texttt l
+.@texttt i
+.@texttt b
+.etc.
+
+@xrdef{Problems with gcc3-title}{Problems with gcc3}
+@xrdef{Problems with gcc3-snt}{Section@tie 1.4.4}
+@xrdef{Problems with Alt key-title}{Problems with Alt key}
+@xrdef{Problems with Alt key-snt}{Section@tie 1.4.5}
+@xrdef{Problems with fonts-title}{Problems with fonts}
+@xrdef{Problems with fonts-snt}{Section@tie 1.4.6}
+@xrdef{No characters displayed-title}{No characters displayed.}
+@xrdef{No characters displayed-snt}{Section@tie 1.4.7}
+[7
+@xrdef{Problems with gcc3-pg}{7}
+@xrdef{Problems with Alt key-pg}{7}
+@xrdef{Problems with fonts-pg}{7}
+]
+@xrdef{No Makefile-title}{No Makefile}
+@xrdef{No Makefile-snt}{Section@tie 1.4.8}
+[8
+@xrdef{No characters displayed-pg}{8}
+@xrdef{No Makefile-pg}{8}
+] ) 
+Here is how much of TeX's memory you used:
+ 1875 strings out of 496720
+ 23847 string characters out of 3194820
+ 65174 words of memory out of 3000000
+ 3039 multiletter control sequences out of 15000+200000
+ 32127 words of font info for 112 fonts, out of 3000000 for 9000
+ 189 hyphenation exceptions out of 8191
+ 11i,5n,16p,292b,390s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmtt10.pfb>
+Output written on gnustep-userfaq.pdf (7 pages, 100809 bytes).
+PDF statistics:
+ 126 PDF objects out of 1000 (max. 8388607)
+ 101 compressed objects within 2 object streams
+ 39 named destinations out of 1000 (max. 500000)
+ 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+

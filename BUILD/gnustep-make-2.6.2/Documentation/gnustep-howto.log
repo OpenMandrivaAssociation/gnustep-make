@@ -1,0 +1,232 @@
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Mandriva) (format=pdfetex 2012.12.12)  18 DEC 2012 23:06
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**./gnustep-howto.texi
+(./gnustep-howto.texi (/usr/share/texmf-dist/tex/texinfo/texinfo.tex
+Loading texinfo [version 2012-07-29.17]:
+\bindingoffset=\dimen16
+\normaloffset=\dimen17
+\pagewidth=\dimen18
+\pageheight=\dimen19
+\outerhsize=\dimen20
+\outervsize=\dimen21
+\cornerlong=\dimen22
+\cornerthick=\dimen23
+\topandbottommargin=\dimen24
+\headlinebox=\box16
+\footlinebox=\box17
+\margin=\insert252
+\EMsimple=\toks13
+\groupbox=\box18
+\groupinvalidhelp=\toks14
+\mil=\dimen25
+\exdentamount=\skip18
+\inmarginspacing=\skip19
+\centerpenalty=\count27
+ pdf,
+\tempnum=\count28
+\lnkcount=\count29
+\filename=\toks15
+\filenamelength=\count30
+\pgn=\count31
+\toksA=\toks16
+\toksB=\toks17
+\toksC=\toks18
+\toksD=\toks19
+\boxA=\box19
+\countA=\count32
+\nopdfimagehelp=\toks20
+ fonts,
+\sffam=\fam8
+\textleading=\dimen26
+ markup,
+\fontdepth=\count33
+ glyphs,
+\errorbox=\box20
+
+page headings,
+\titlepagetopglue=\skip20
+\titlepagebottomglue=\skip21
+\evenheadline=\toks21
+\oddheadline=\toks22
+\evenfootline=\toks23
+\oddfootline=\toks24
+ tables,
+\tableindent=\dimen27
+\itemindent=\dimen28
+\itemmargin=\dimen29
+\itemmax=\dimen30
+\itemno=\count34
+\multitableparskip=\skip22
+\multitableparindent=\skip23
+\multitablecolspace=\dimen31
+\multitablelinespace=\skip24
+\colcount=\count35
+\everytab=\toks25
+ conditionals,
+\doignorecount=\count36
+ indexing,
+\whatsitskip=\skip25
+\whatsitpenalty=\count37
+\secondaryindent=\skip26
+\partialpage=\box21
+\doublecolumnhsize=\dimen32
+ sectioning,
+\unnumberedno=\count38
+\chapno=\count39
+\secno=\count40
+\subsecno=\count41
+\subsubsecno=\count42
+\appendixno=\count43
+\absseclevel=\count44
+\secbase=\count45
+\chapheadingskip=\skip27
+\secheadingskip=\skip28
+\subsecheadingskip=\skip29
+ toc,
+\tocfile=\write0
+\contentsrightmargin=\skip30
+\savepageno=\count46
+\lastnegativepageno=\count47
+\tocindent=\dimen33
+ environments,
+\lispnarrowing=\skip31
+\envskipamount=\skip32
+\circthick=\dimen34
+\cartouter=\dimen35
+\cartinner=\dimen36
+\normbskip=\skip33
+\normpskip=\skip34
+\normlskip=\skip35
+\lskip=\skip36
+\rskip=\skip37
+\nonfillparindent=\dimen37
+\tabw=\dimen38
+\verbbox=\box22
+
+defuns,
+\defbodyindent=\skip38
+\defargsindent=\skip39
+\deflastargmargin=\skip40
+\defunpenalty=\count48
+\parencount=\count49
+\brackcount=\count50
+ macros,
+\paramno=\count51
+\macname=\toks26
+ cross references,
+\auxfile=\write1
+\savesfregister=\count52
+\toprefbox=\box23
+\printedrefnamebox=\box24
+\infofilenamebox=\box25
+\printedmanualbox=\box26
+ insertions,
+\footnoteno=\count53
+\SAVEfootins=\box27
+\SAVEmargin=\box28
+
+(/usr/share/texmf-dist/tex/generic/epsf/epsf.tex
+This is `epsf.tex' v2.7.4 <14 February 2011>
+\epsffilein=\read1
+\epsfframemargin=\dimen39
+\epsfframethickness=\dimen40
+\epsfrsize=\dimen41
+\epsftmp=\dimen42
+\epsftsize=\dimen43
+\epsfxsize=\dimen44
+\epsfysize=\dimen45
+\pspoints=\dimen46
+)
+\noepsfhelp=\toks27
+ localization,
+\nolanghelp=\toks28
+\countUTFx=\count54
+\countUTFy=\count55
+\countUTFz=\count56
+ formatting,
+\defaultparindent=\dimen47
+ and turning on texinfo input format.)
+(./gnustep-howto.aux)
+\openout1 = `gnustep-howto.aux'.
+
+@cpindfile=@write2
+@fnindfile=@write3
+@vrindfile=@write4
+@tpindfile=@write5
+@kyindfile=@write6
+@pgindfile=@write7
+ [2
+\openout2 = `gnustep-howto.cp'.
+
+\openout3 = `gnustep-howto.fn'.
+
+\openout4 = `gnustep-howto.vr'.
+
+\openout5 = `gnustep-howto.tp'.
+
+\openout6 = `gnustep-howto.ky'.
+
+\openout7 = `gnustep-howto.pg'.
+
+{/usr/share/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+[3] (./gnustep-howto.toc) [-1] (./gnustep-howto.toc) (./gnustep-howto.toc)
+texinfo.tex: doing @include of version.texi
+
+
+(./version.texi) Chapter 1
+\openout0 = `gnustep-howto.toc'.
+
+ Chapter 2 [1] [2] [3] Chapter 3 [4] [5] Chapter 4
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 345--354
+@textrm to re-pla-ce @texttt /usr/local/share/GNUstep/Makefiles/GNUstep.sh[] @t
+extrm with
+
+@hbox(7.60416+2.43333)x361.34999, glue set 4.96718
+.@textrm t
+.@textrm o
+.@glue 3.65 plus 1.825 minus 1.21666
+.@textrm r
+.@textrm e
+.etc.
+
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 408--412
+[]@textrm See @texttt /usr/local/lib/GNUstep/Libraries/gnustep-
+
+@hbox(7.60416+2.43333)x361.34999, glue set 49.96562
+.@hbox(0.0+0.0)x15.0
+.@textrm S
+.@textrm e
+.@textrm e
+.@glue 3.65 plus 1.825 minus 1.21666
+.etc.
+
+Chapter 5 [8] Chapter 6 [9] Chapter 7 [10] [11] ) 
+Here is how much of TeX's memory you used:
+ 1943 strings out of 496720
+ 23956 string characters out of 3194820
+ 59092 words of memory out of 3000000
+ 3101 multiletter control sequences out of 15000+200000
+ 32127 words of font info for 112 fonts, out of 3000000 for 9000
+ 189 hyphenation exceptions out of 8191
+ 13i,6n,16p,290b,413s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/share/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
+12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/sh
+are/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/share/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmsltt10.pfb></usr/share/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.p
+fb>
+Output written on gnustep-howto.pdf (14 pages, 142028 bytes).
+PDF statistics:
+ 195 PDF objects out of 1000 (max. 8388607)
+ 159 compressed objects within 2 object streams
+ 26 named destinations out of 1000 (max. 500000)
+ 125 words of extra memory for PDF output out of 10000 (max. 10000000)
+
