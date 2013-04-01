@@ -5,8 +5,8 @@
 %define _disable_ld_no_undefined 1
 
 Name: 		gnustep-make
-Version: 	2.6.2
-Release: 	3
+Version: 	2.6.4
+Release: 	1
 Source0: 	ftp://ftp.gnustep.org/pub/gnustep/core/%{name}-%{version}.tar.gz
 License: 	GPLv3+
 Group:		Development/Other 
