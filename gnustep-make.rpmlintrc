@@ -1,0 +1,2 @@
+# Intentional, as gnustep-make is a sort of devel package
+addFilter("E: devel-file-in-non-devel-package")
