@@ -12,6 +12,7 @@ License: 	GPLv3+
 Group:		Development/Other 
 Url:		http://www.gnustep.org/
 Source0: 	ftp://ftp.gnustep.org/pub/gnustep/core/%{name}-%{version}.tar.gz
+Source100:	%{name}.rpmlintrc
 BuildRequires:	texinfo latex2html >= 2008-6
 BuildRequires:	tetex-latex tetex-dvips texi2html
 BuildConflicts:	%{name}
