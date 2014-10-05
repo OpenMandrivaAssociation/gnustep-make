@@ -7,7 +7,7 @@
 Summary: 	GNUstep Makefile package
 Name: 		gnustep-make
 Version: 	2.6.6
-Release: 	3
+Release: 	4
 License: 	GPLv3+
 Group:		Development/Other 
 Url:		http://www.gnustep.org/
@@ -40,6 +40,9 @@ sed -i -e 's,/lib,/%{_lib},g' FilesystemLayouts/fhs*
 %endif
  
 %build
+export CXX=g++
+export CC=gcc
+
 %configure2_5x \
 	--with-layout=fhs-system \
 	--with-user-dir=.gnustep
