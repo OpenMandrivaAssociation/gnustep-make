@@ -13,8 +13,13 @@ Group:		Development/Other
 Url:		http://www.gnustep.org/
 Source0: 	ftp://ftp.gnustep.org/pub/gnustep/core/%{name}-%{version}.tar.gz
 Source100:	%{name}.rpmlintrc
-BuildRequires:	texinfo latex2html >= 2008-6
-BuildRequires:	tetex-latex texlive-latex-bin texlive tetex-dvips texi2html
+BuildRequires:	texinfo
+BuildRequires:	latex2html >= 2008-6
+BuildRequires:	texlive-latex
+BuildRequires:	texlive-latex-bin
+BuildRequires:	texlive
+BuildRequires:	texlive-dvips
+BuildRequires:	texi2html
 BuildConflicts:	%{name}
 
 %track
