@@ -60,15 +60,12 @@ cd Documentation
 %install
 %makeinstall_std
 cd Documentation
-make install
+%makeinstall_std
 mkdir -p %{buildroot}/%{_datadir}/GNUstep
-cd tmp-installation/System/Library/Documentation
-cp -fr info %{buildroot}/%{_datadir}/GNUstep/
+mv %{buildroot}/%{_infodir} %{buildroot}/%{_datadir}/GNUstep
  
 %files
 %doc ANNOUNCE ChangeLog FAQ GNUstep-HOWTO NEWS README RELEASENOTES Version
-%doc Documentation/tmp-installation/System/Library/Documentation/Developer
-%doc Documentation/tmp-installation/System/Library/Documentation/User
 %{_sysconfdir}/GNUstep
 %{_bindir}/*
 %{_datadir}/GNUstep
