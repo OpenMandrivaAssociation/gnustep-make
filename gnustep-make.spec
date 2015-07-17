@@ -48,7 +48,7 @@ sed -i -e 's,/lib,/%{_lib},g' FilesystemLayouts/fhs*
 export CXX=g++
 export CC=gcc
 
-%configure2_5x \
+%configure \
 	--with-layout=fhs-system \
 	--with-user-dir=.gnustep
 %make
