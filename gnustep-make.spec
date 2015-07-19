@@ -7,7 +7,7 @@
 Summary: 	GNUstep Makefile package
 Name: 		gnustep-make
 Version: 	2.6.7
-Release: 	1
+Release: 	2
 License: 	GPLv3+
 Group:		Development/Other 
 Url:		http://www.gnustep.org/
