@@ -1,4 +1,2 @@
-removed_sources:
-  gnustep-make-2.6.6.tar.gz: 5a28cc30e84b3d4ed3f4153e101897ba3a38dd15
 sources:
-  gnustep-make-2.6.7.tar.gz: 9ed747877f42c164911e7ec1af3d989b261571d9
+  gnustep-make-2.6.8.tar.gz: 7ab7c8762c125742d332ef145aa920b00068b0e7
