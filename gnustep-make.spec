@@ -22,13 +22,6 @@ BuildRequires:	texlive-dvips
 BuildRequires:	texi2html
 BuildConflicts:	%{name}
 
-%track
-prog %{name} = {
-	version = %version
-	url = http://ftp.gnustep.org/pub/gnustep/core/
-	regex = %{name}-(__VER__)\.tar\.gz
-}
-
 %description
 This package contains the basic scripts, makefiles and directory layout
 needed to run and compile any GNUstep software.
