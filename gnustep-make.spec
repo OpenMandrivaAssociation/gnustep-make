@@ -3,16 +3,18 @@
 # lib vs. lib64 references
 %define debug_package %nil
 %define _disable_ld_no_undefined 1
+%bcond_with docs
 
 Summary: 	GNUstep Makefile package
 Name: 		gnustep-make
 Version: 	2.7.0
-Release: 	2
+Release: 	3
 License: 	GPLv3+
 Group:		Development/Other 
 Url:		http://www.gnustep.org/
 Source0: 	ftp://ftp.gnustep.org/pub/gnustep/core/%{name}-%{version}.tar.gz
 Source100:	%{name}.rpmlintrc
+%if %{with docs}
 BuildRequires:	texinfo
 BuildRequires:	latex2html >= 2008-6
 BuildRequires:	texlive-latex
@@ -20,6 +22,7 @@ BuildRequires:	texlive-latex-bin
 BuildRequires:	texlive
 BuildRequires:	texlive-dvips
 BuildRequires:	texi2html
+%endif
 BuildConflicts:	%{name}
 
 %description
@@ -47,15 +50,19 @@ export CC=gcc
 %make
 sed -i -e 's|%{_prefix}/man|%{_mandir}|g' GNUstep.conf
 sed -i -e 's|%{_prefix}/info|%{_datadir}/GNUstep/info|g' GNUstep.conf
+%if %{with docs}
 cd Documentation
 %make
+%endif
 
 %install
 %makeinstall_std
+%if %{with docs}
 cd Documentation
 %makeinstall_std
 mkdir -p %{buildroot}/%{_datadir}/GNUstep
 mv %{buildroot}/%{_infodir} %{buildroot}/%{_datadir}/GNUstep
+%endif
  
 %files
 %doc ANNOUNCE ChangeLog FAQ GNUstep-HOWTO NEWS README RELEASENOTES Version
@@ -64,4 +71,3 @@ mv %{buildroot}/%{_infodir} %{buildroot}/%{_datadir}/GNUstep
 %{_datadir}/GNUstep
 %{_mandir}/man1/*
 %{_mandir}/man7/*
-
