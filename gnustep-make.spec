@@ -5,10 +5,12 @@
 %define _disable_ld_no_undefined 1
 %bcond_with docs
 
+%global optflags %(echo %{optflags} -fno-lto |sed -e 's, -flto,,g')
+
 Summary: 	GNUstep Makefile package
 Name: 		gnustep-make
 Version: 	2.8.0
-Release: 	2
+Release: 	3
 License: 	GPLv3+
 Group:		Development/Other 
 Url:		http://www.gnustep.org/
