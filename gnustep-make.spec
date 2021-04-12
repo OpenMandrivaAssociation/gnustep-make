@@ -8,12 +8,13 @@
 Summary: 	GNUstep Makefile package
 Name: 		gnustep-make
 Version: 	2.8.0
-Release: 	1
+Release: 	2
 License: 	GPLv3+
 Group:		Development/Other 
 Url:		http://www.gnustep.org/
 Source0: 	ftp://ftp.gnustep.org/pub/gnustep/core/%{name}-%{version}.tar.gz
 Source100:	%{name}.rpmlintrc
+BuildRequires:	pkgconfig(libobjc) >= 2.0.0
 %if %{with docs}
 BuildRequires:	texinfo
 BuildRequires:	latex2html >= 2008-6
@@ -35,31 +36,29 @@ files will refer to /usr/GNUstep as being the root directory, which is
 incorrect.  Also, user files are stored in ~/.gnustep rather than ~/GNUstep.
 
 %prep
-%setup -q
+%autosetup -p1
 %if "%{_lib}" != "lib"
 sed -i -e 's,/lib,/%{_lib},g' FilesystemLayouts/fhs*
 %endif
- 
-%build
-export CXX=g++
-export CC=gcc
-
 %configure \
 	--with-layout=fhs-system \
+	--with-library-combo=ng-gnu-gnu \
 	--with-user-dir=.gnustep
-%make
+ 
+%build
+%make_build
 sed -i -e 's|%{_prefix}/man|%{_mandir}|g' GNUstep.conf
 sed -i -e 's|%{_prefix}/info|%{_datadir}/GNUstep/info|g' GNUstep.conf
 %if %{with docs}
 cd Documentation
-%make
+%make_build
 %endif
 
 %install
-%makeinstall_std
+%make_install
 %if %{with docs}
 cd Documentation
-%makeinstall_std
+%make_install
 mkdir -p %{buildroot}/%{_datadir}/GNUstep
 mv %{buildroot}/%{_infodir} %{buildroot}/%{_datadir}/GNUstep
 %endif
