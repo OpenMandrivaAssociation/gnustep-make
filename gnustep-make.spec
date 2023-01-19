@@ -6,7 +6,7 @@
 %bcond_with docs
 
 %global optflags %(echo %{optflags} -fno-lto |sed -e 's, -flto,,g')
-%global underscoredversion %(echo %{version} |sed -e 's,\\.,_,g')
+%define underscoredversion %(echo %{version} |sed -e 's,\\.,_,g')
 
 Summary: 	GNUstep Makefile package
 Name: 		gnustep-make
