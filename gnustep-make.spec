@@ -5,13 +5,15 @@
 %define _disable_ld_no_undefined 1
 %bcond_with docs
 
-%global optflags %(echo %{optflags} -fno-lto |sed -e 's, -flto,,g')
+# Compiler flags used here get propagated, and gnustep-base doesn't like
+# -Os/-Oz because of the float vs. _Float32 mess
+%global optflags %(echo %{optflags} -fno-lto |sed -e 's, -flto,,g') -O3
 %define underscoredversion %(echo %{version} |sed -e 's,\\.,_,g')
 
 Summary: 	GNUstep Makefile package
 Name: 		gnustep-make
 Version: 	2.9.1
-Release: 	1
+Release: 	2
 License: 	GPLv3+
 Group:		Development/Other 
 Url:		http://www.gnustep.org/
