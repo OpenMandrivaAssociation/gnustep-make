@@ -6,15 +6,16 @@
 %bcond_with docs
 
 %global optflags %(echo %{optflags} -fno-lto |sed -e 's, -flto,,g')
+%global underscoredversion %(echo %{version} |sed -e 's,\\.,_,g')
 
 Summary: 	GNUstep Makefile package
 Name: 		gnustep-make
-Version: 	2.9.0
+Version: 	2.9.1
 Release: 	1
 License: 	GPLv3+
 Group:		Development/Other 
 Url:		http://www.gnustep.org/
-Source0: 	ftp://ftp.gnustep.org/pub/gnustep/core/%{name}-%{version}.tar.gz
+Source0: 	https://github.com/gnustep/tools-make/releases/download/make-%{underscoredversion}/gnustep-make-%{version}.tar.gz
 Source100:	%{name}.rpmlintrc
 BuildRequires:	pkgconfig(libobjc) >= 2.0.0
 %if %{with docs}
