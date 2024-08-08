@@ -13,7 +13,7 @@
 Summary: 	GNUstep Makefile package
 Name: 		gnustep-make
 Version: 	2.9.2
-Release: 	1
+Release: 	2
 License: 	GPLv3+
 Group:		Development/Other 
 Url:		http://www.gnustep.org/
@@ -46,6 +46,7 @@ incorrect.  Also, user files are stored in ~/.gnustep rather than ~/GNUstep.
 sed -i -e 's,/lib,/%{_lib},g' FilesystemLayouts/fhs*
 %endif
 %configure \
+	--with-libdir=%{_lib} \
 	--with-layout=fhs-system \
 	--with-library-combo=ng-gnu-gnu \
 	--with-user-dir=.gnustep
