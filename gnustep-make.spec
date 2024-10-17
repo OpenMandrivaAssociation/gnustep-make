@@ -16,7 +16,7 @@ Version: 	2.9.2
 Release: 	2
 License: 	GPLv3+
 Group:		Development/Other 
-Url:		http://www.gnustep.org/
+Url:		https://www.gnustep.org/
 Source0: 	https://github.com/gnustep/tools-make/releases/download/make-%{underscoredversion}/gnustep-make-%{version}.tar.gz
 Source100:	%{name}.rpmlintrc
 BuildRequires:	pkgconfig(libobjc) >= 2.0.0
